@@ -22,7 +22,7 @@ public class CitySelectActivity extends BaseActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_cityselect);
 		ViewUtils.inject(this); //xutils必加语句在      使用注解绑定控件的时候，一定记得在onCreate中调用
-		setTitle("切换城市");
+		setTitle("111换城市");
 		
 		
 		initView();
