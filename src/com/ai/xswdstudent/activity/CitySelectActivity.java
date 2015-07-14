@@ -21,7 +21,7 @@ public class CitySelectActivity extends BaseActivity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_cityselect);
-		ViewUtils.inject(this); //xutils必加语句
+		ViewUtils.inject(this); //xutils必加语句在      使用注解绑定控件的时候，一定记得在onCreate中调用
 		setTitle("切换城市");
 		
 		
@@ -30,7 +30,8 @@ public class CitySelectActivity extends BaseActivity{
 
 	public void initView()
 	{
-		
+		//@ViewInject(R.id.)
+	   
 	}
 	
 	@OnClick(R.id.txtbase_top_left)
