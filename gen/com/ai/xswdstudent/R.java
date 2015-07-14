@@ -267,7 +267,7 @@ public final class R {
         public static final int action_settings=0x7f0a002d;
         public static final int base_top=0x7f0a0004;
         public static final int btn_register_first_submit=0x7f0a000e;
-        public static final int btn_register_next_step=0x7f0a0014;
+        public static final int btn_register_next=0x7f0a0014;
         public static final int btn_register_vertification=0x7f0a0011;
         public static final int chekbox_layout=0x7f0a0027;
         public static final int chk_login_rfsdfedad=0x7f0a000f;
@@ -390,6 +390,7 @@ public final class R {
         public static final int skip=0x7f060004;
         public static final int soon_register=0x7f060009;
         public static final int sunday=0x7f060025;
+        public static final int telphone_empty=0x7f06002c;
         public static final int thesday=0x7f060027;
         public static final int thursday=0x7f060029;
         /**  Upgrade 
@@ -402,6 +403,8 @@ public final class R {
         public static final int username=0x7f060005;
         public static final int vertification=0x7f060011;
         public static final int wednesday=0x7f060028;
+        public static final int ysh_password_empty=0x7f06002d;
+        public static final int ysh_telphone_empty=0x7f06002b;
     }
     public static final class style {
         /** 

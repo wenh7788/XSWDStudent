@@ -66,5 +66,11 @@
     <string name="wednesday">三</string>
     <string name="thursday">四</string>
     <string name="friday">五</string>
+    
+    <string name="ysh_telphone_empty">账号为空</string>
+    <string name="telphone_empty">手机号码为空 </string>
+    <string name="ysh_password_empty">密码为空</string>
+    
+    
 
 </resources>
