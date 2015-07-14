@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/wx_common_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dip"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/logo" >
+        </ImageView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@color/gray_dbdbdb_color"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="65dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:gravity="left"
+            android:text="+86"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/register_code_edittext"
+            android:layout_width="80dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="10dip"
+            android:background="@android:color/transparent"
+            android:hint="请输入手机号码"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/common_title_right"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_marginTop="40dip" >
+
+        <Button
+        android:id="@+id/btn_register_first_submit"
+        android:layout_width="fill_parent"
+        android:layout_height="60px"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="30px"
+        android:background="#48b0ef"
+        android:textColor="#ffffff"
+        android:textSize="18px" />
+        
+        
+        
+        
+        
+    </RelativeLayout>
+    
+    
+    
+    
+                    <LinearLayout
+                        android:id="@+id/chekbox_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <CheckBox
+                            android:id="@+id/login_remember_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/wx_checkbox_blue"
+                            android:checked="true"
+                            android:focusable="false" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dip"
+                            android:text="我已阅读同意"
+                            android:textColor="@color/common_title_454545_color"
+                            android:textSize="14sp" />
+                        
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dip"
+                            android:text="《寻师问道使用条款》"
+                            android:textColor="@color/blue"
+                            android:textSize="14sp" />
+                        
+                        
+                    </LinearLayout>
+              
+    
+
+</LinearLayout>

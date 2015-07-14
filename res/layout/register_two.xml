@@ -1,0 +1,123 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:orientation="vertical" >
+
+  <include layout="@layout/wx_common_title" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="58px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="32px"
+            android:background="@drawable/frame_white"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_register_vertification"
+                style="@null"
+                android:layout_width="0dp"
+                android:layout_height="58px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:hint="@string/vertification"
+                android:imeOptions="actionNext"
+                android:paddingLeft="15px"
+                android:singleLine="true"
+                android:textColor="#919191"
+                android:textSize="24px" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp" >
+
+                <Button
+                    android:id="@+id/btn_register_vertification"
+                    android:layout_width="60dip"
+                    android:layout_height="40dip"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:padding="3px"
+                    android:text="@string/get_time"
+                    android:textColor="#ffffffff"
+                    android:textSize="24px" />
+
+                <Chronometer
+                    android:id="@+id/chm_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffeaeaea"
+                    android:padding="8dp"
+                    android:textColor="#ffffffff"
+                    android:textSize="14px"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="58px"
+            android:layout_marginLeft="40px"
+            android:layout_marginRight="40px"
+            android:layout_marginTop="30px"
+            android:background="@drawable/frame_white"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_register_password"
+                style="@null"
+                android:layout_width="0dp"
+                android:layout_height="58px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:background="@null"
+                android:hint="@string/repeat_password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:paddingLeft="15px"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="#919191"
+                android:textSize="24px" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#dddddd" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40px"
+        android:layout_marginTop="32px"
+        android:text="注意：密码由6-12位字母/数字组成"
+        android:textColor="#48b0ef"
+        android:textSize="22px" />
+
+    <Button
+        android:id="@+id/btn_register_next_step"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25px"
+        android:layout_marginRight="25px"
+        android:layout_marginTop="90px"
+        android:background="#F78642"
+        android:padding="8dp"
+        android:text="提交"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/Login_Text_Size" />
+
+</LinearLayout>
