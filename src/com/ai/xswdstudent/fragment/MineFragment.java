@@ -8,8 +8,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 public class MineFragment extends Fragment{
+    
+    
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -17,6 +20,7 @@ public class MineFragment extends Fragment{
 		
 			View view=inflater.inflate(R.layout.fragment_mine, null);
 			ViewUtils.inject(this, view); //xutils±ØÐë¼ÓµÄ
+			
 			return view;
 		}
 

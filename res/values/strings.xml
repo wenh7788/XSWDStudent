@@ -6,6 +6,7 @@
     <string name="action_settings">Settings</string>
     <!-- Upgrade -->
     <string name="upgrade_url">software/Version?name=AkCustom</string>
+    <string name="get_verificaton">免费获取</string>
 
     <!-- StartFragment -->
     <string name="skip">跳过 >>></string>
@@ -55,7 +56,6 @@
     <string name="forget_password">忘记密码</string>
     <string name="confirm">确认</string>
 
-    <!-- AcchivesFragment -->
     <string name="checkup_report">"体检报告"</string>
     <string name="self_monitor">"自我检测"</string>
     <string name="case_file">"病历档案"</string>
@@ -69,7 +69,9 @@
     
     <string name="ysh_telphone_empty">账号为空</string>
     <string name="telphone_empty">手机号码为空 </string>
+    <string name="username_empty">用户名号码为空 </string>
     <string name="ysh_password_empty">密码为空</string>
+    <string name="yz_empty">密码为空</string>
     
     
 

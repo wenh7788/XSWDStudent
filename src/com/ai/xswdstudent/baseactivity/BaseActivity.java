@@ -45,9 +45,9 @@ public class BaseActivity extends Activity{
     
 	
 
-	public void setTitle(String str)
-	{
-		getCommonView().initBaseTopMid().setText(str);
-	}
-	
+//	public void setTitle(String str)
+//	{
+//		getCommonView().initBaseTopMid().setText(str);
+//	}
+//	
 }

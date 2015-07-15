@@ -10,6 +10,10 @@
 
     <!-- 副标题颜色 -->
     <color name="common_content_a7a7a7_color">#a7a7a7</color>
+    <color name="font_loginFragment">#ff000000</color>
+    <color name="bg_loginFragment_line">#ffdddddd</color>
+    <color name="et_bg_loginfragment">#ffffffff</color>
+    <color name="btn_startpage_04_unpress">#ff4bd615</color>
 
     <!-- 灰色字体 -->
     <color name="ysh_A9AAAB_color">#A9AAAB</color>
@@ -60,6 +64,9 @@
     <color name="ysh_button_red_normal">#ff6d6d</color>
     <color name="ysh_button_red_press">#e05353</color>
 
+    <color name="loginout_btn">#D93600</color>
+    
+    
     <!-- 黑色系列 -->
     <color name="black_color">#000000</color>
     <color name="black_858585_color">#858585</color>
