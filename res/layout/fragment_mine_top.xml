@@ -5,6 +5,7 @@
     android:background="#f78642"
     android:orientation="vertical" >
 	    <TextView 
+	        android:id="@+id/toptitle"
 	        android:layout_width="fill_parent"
 	        android:layout_height="fill_parent"
 	        android:text="消息"

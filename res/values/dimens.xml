@@ -14,5 +14,8 @@
     <!-- LoginFragment  -->
     <dimen name="Login_Head">50dp</dimen>
     <dimen name="Login_Text_Size">18sp</dimen>
+    
+     <dimen name="my_order_class_font_size_13">13sp</dimen>
+    <dimen name="my_order_class_font_size_12">12sp</dimen>
 
 </resources>

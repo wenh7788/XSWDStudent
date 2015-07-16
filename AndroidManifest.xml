@@ -48,16 +48,29 @@
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan" >
         </activity>
-        
-        
-          <activity
+        <activity
             android:name="com.ai.xswdstudent.city.CityList"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan" >
         </activity>
-   
+        <activity
+            android:name="com.ai.xswdstudent.activity.PersoncentActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.ai.xswdstudent.activity.PersoncentUpdateNameActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
         
-     
+               <activity
+            android:name="com.ai.xswdstudent.activity.MyOrederActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        
     </application>
 
 </manifest>

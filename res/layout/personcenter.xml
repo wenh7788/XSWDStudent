@@ -1,0 +1,516 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE"
+    android:orientation="vertical">
+
+<include layout="@layout/wx_common_title" />
+
+
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical">
+
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE"
+    android:orientation="vertical" >
+
+    <LinearLayout
+    android:id="@+id/my_img"
+    android:layout_width="match_parent"
+    android:layout_height="90dip"
+    android:background="@drawable/wtbg"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/myimg"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="修改头像"
+            android:gravity="center_vertical"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/defaulticon" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+	<LinearLayout
+    android:id="@+id/my_account"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:background="@drawable/wtbg"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/myaccountL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="我的账号"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+
+        
+        <TextView
+            android:id="@+id/myaccountR"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dip"
+            android:layout_weight="1"
+            android:text="158 1234 5678"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    <LinearLayout
+    android:id="@+id/my_name"
+    android:layout_width="match_parent"
+      android:layout_height="50dip"
+    android:background="@drawable/wtbg"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        
+        <TextView
+            android:id="@+id/mynameL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="我的姓名"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mynameR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            
+            android:text="赵菲儿"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+    <LinearLayout
+    android:id="@+id/my_nickname"
+    android:layout_width="match_parent"
+       android:layout_height="50dip"
+    android:background="@drawable/wtbg"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        
+        <TextView
+            android:id="@+id/mynicknameL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="我的昵称"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mynicknameR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:text="飞飞"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+        <LinearLayout
+    android:id="@+id/my_mail"
+    android:layout_width="match_parent"
+        android:layout_height="50dip"
+    android:background="@drawable/wtbg"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        
+        <TextView
+            android:id="@+id/mymailL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="我的邮箱"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mymailR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:text="尚未填写"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+    <LinearLayout
+    android:id="@+id/my_sex"
+    android:layout_width="match_parent"
+
+    android:layout_height="50dip"
+        android:background="@drawable/wtbg"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        
+        <TextView
+            android:id="@+id/mysexL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="我的性别"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mysexR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:text="女"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+        <LinearLayout
+    android:id="@+id/my_address"
+    android:layout_width="match_parent"
+    android:background="@drawable/wtbg"
+        android:layout_height="50dip"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        
+        <TextView
+            android:id="@+id/myaddressL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="我的地址"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/myaddressR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:text="尚未填写"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+        <LinearLayout
+    android:id="@+id/my_birthday"
+    android:layout_width="match_parent"
+    android:background="@drawable/wtbg"
+        android:layout_height="50dip"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        
+        <TextView
+            android:id="@+id/mybirthL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="出生日期"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/mybirthR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:text="尚未填写"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+        <LinearLayout
+    android:id="@+id/studylevel"
+    android:layout_width="match_parent"
+        android:layout_height="50dip"
+    android:background="@drawable/wtbg"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        
+        <TextView
+            android:id="@+id/studylevelL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="学习阶段"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/studylevelR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:text="初中二年级"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+    <LinearLayout
+	    android:id="@+id/hobby"
+	    android:layout_width="match_parent"
+	        android:layout_height="50dip"
+	    android:background="@drawable/wtbg"
+	    android:baselineAligned="true"
+	    android:gravity="center_vertical"
+	    android:orientation="horizontal" >
+        
+        <TextView
+            android:id="@+id/hobbyL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="兴趣爱好"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/hobbyR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:text="声乐、舞蹈"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+    <LinearLayout
+		    android:id="@+id/personalsign"
+		    android:layout_width="match_parent"
+		    android:background="@drawable/wtbg"
+		        android:layout_height="50dip"
+		    android:baselineAligned="true"
+		    android:gravity="center_vertical"
+		    android:orientation="horizontal" >
+
+        
+        <TextView
+            android:id="@+id/signL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="个性签名"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/signR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:text="尚未填写"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+            <LinearLayout
+    android:id="@+id/personaldesc"
+    android:layout_width="match_parent"
+        android:layout_height="50dip"
+    android:background="@drawable/wtbg"
+    android:baselineAligned="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+        
+        <TextView
+            android:id="@+id/descL"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:text="个人说明"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/descR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0dip"
+            android:text="尚未填写"
+            android:textColor="@color/common_title_454545_color"
+            android:textSize="16sp" />
+        
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/jiantougren" />
+    </LinearLayout>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="#DDD"
+        />
+    
+    
+ </LinearLayout>
+        </ScrollView>    
+        </LinearLayout>
