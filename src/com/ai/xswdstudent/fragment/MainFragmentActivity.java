@@ -1,9 +1,11 @@
 package com.ai.xswdstudent.fragment;
 
 import com.ai.xswdstudent.R;
+import com.ai.xswdstudent.view.TabFragmentHost;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
 import android.view.LayoutInflater;
@@ -16,7 +18,7 @@ import android.widget.TabHost.TabSpec;
 public class MainFragmentActivity extends FragmentActivity {
 
 	//定义FragmentTabHost对象
-	private FragmentTabHost mTabHost;
+	private TabFragmentHost mTabHost;
 	//定义一个布局
 	private LayoutInflater layoutInflater;
 	
@@ -48,7 +50,7 @@ public class MainFragmentActivity extends FragmentActivity {
 		layoutInflater = LayoutInflater.from(this);
 				
 		//实例化TabHost对象，得到TabHost
-		mTabHost = (FragmentTabHost)findViewById(android.R.id.tabhost);
+		mTabHost = (TabFragmentHost)findViewById(android.R.id.tabhost);
 		mTabHost.setup(this, getSupportFragmentManager(), R.id.maincontent);	
 		
 		//得到fragment的个数
@@ -61,7 +63,8 @@ public class MainFragmentActivity extends FragmentActivity {
 			mTabHost.addTab(tabSpec, fragmentArray[i], null);
 			//设置Tab按钮的背景
 			mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.selector_tab_background);
-			//mTabHost.getTabWidget().getChildAt(i).setBackgroundColor(R.drawable.selector_tab_background);
+			//mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.selector_tab_background);
+
 		}
 	}
 	
@@ -71,10 +74,9 @@ public class MainFragmentActivity extends FragmentActivity {
 	 */
 	private View getTabItemView(int index){
 		View view = layoutInflater.inflate(R.layout.tab_item_view, null);
-	
+		
 		ImageView imageView = (ImageView) view.findViewById(R.id.imageview);
 		imageView.setImageResource(mImageViewArray[index]);
-		
 		TextView textView = (TextView) view.findViewById(R.id.textview);		
 		textView.setText(mTextviewArray[index]);
 	
