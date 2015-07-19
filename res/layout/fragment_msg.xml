@@ -9,9 +9,70 @@
         android:id="@+id/fragment_msg_top"
         layout="@layout/fragment_msg_top"
         />
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout 
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="消息"
-        />
+        android:orientation="vertical"
+        android:background="@drawable/msg_bg"
+        >
+        
+        <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+	     	<TextView
+	            android:id="@+id/txtsysmsgall"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1.0"
+	            android:gravity="center"
+	            android:layout_gravity="center"
+	            android:text="全部"
+	            android:textColor="#fff"
+	            android:textSize="16sp"
+	            android:padding="10dp"
+	            android:drawableLeft="@drawable/msg_point_nor"
+	            
+	            />
+			<LinearLayout 
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+	            android:layout_weight="1.0"
+	            android:gravity="center"
+			    >
+		        <TextView
+		            android:layout_width="75dp"
+		            android:layout_height="75dp"
+		            android:gravity="center"
+					android:background="@drawable/msg_point"
+					/>
+			</LinearLayout>
+
+	        <TextView
+	            android:id="@+id/txtsysmsgnoread"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1.0"
+	            android:gravity="center"
+	            android:layout_gravity="center"
+	            android:text="未读"
+	            android:textColor="#fff"
+	            android:textSize="16sp" 
+	            android:padding="10dp"
+	            android:drawableLeft="@drawable/msg_point_nor"
+	            />
+        </LinearLayout>
+        
+	    <android.support.v4.view.ViewPager
+	        android:id="@+id/pager_msg"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:flipInterval="30"
+	        android:persistentDrawingCache="animation" />
+        
+    </LinearLayout>
 </LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:padding="10dp"
+    >
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        <ImageView 
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/msg_head"
+            
+            />
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        >
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView 
+                android:id="@+id/txtmsgtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="系统消息"
+                android:textColor="#AEE3FD"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:id="@+id/txtmsgtime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2015-05-31"
+                android:textColor="#AEE3FD"
+                android:textSize="16sp"
+               	android:gravity="right"
+                 />
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView 
+                android:id="@+id/txtmsgcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="你好，飞飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学你好飞同学你好，飞飞同学你好，飞飞同学你好飞同学你好，飞飞同学你好，飞飞同学你好飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学你好，飞飞同学"
+                android:textColor="#fff" 
+                android:ellipsize="end"
+                android:maxWidth="90dp"
+
+                />
+            
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            >
+            <TextView 
+                android:id="@+id/txtgo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去查看"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    
+    
+    
+</LinearLayout>

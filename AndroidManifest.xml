@@ -70,7 +70,19 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         
+        <!-- 系统全部消息 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.MsgSysAllActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
         
+        <!-- 系统未读消息 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.MsgSysNoReadActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity> 
     </application>
 
 </manifest>

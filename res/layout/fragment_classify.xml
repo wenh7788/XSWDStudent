@@ -9,10 +9,41 @@
         android:id="@+id/fragment_classify_top"
         layout="@layout/fragment_classify_top"
         />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="分类"
-        />
 
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    >
+	    <com.ai.xswdstudent.view.ArrowListView
+	        android:id="@+id/listclassify1"
+	        android:layout_width="0dp"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+ 			android:cacheColorHint="#FFEDEDED" 
+ 			android:divider="#00EDEDED" 
+ 			android:scrollbars="none"	 
+ 			android:background="#E4E4E4" 
+ 			topArrowPadding="5dp" 
+ 			bottomArrowPadding="10dp"	      
+	        />
+	    <ListView
+	        android:id="@+id/listclassify2"
+	        android:layout_width="0dp"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="1"
+ 			android:cacheColorHint="#FFEDEDED" 
+ 			android:divider="#00EDEDED" 
+ 			android:background="#F0F0F0"  				        
+	        />
+	    <ListView
+	        android:id="@+id/listclassify3"
+	        android:layout_width="0dp"
+	        android:layout_height="fill_parent"
+	        android:layout_weight="2"
+ 			android:cacheColorHint="#FFEDEDED" 
+ 			android:divider="#00EDEDED" 
+ 			android:background="#F8F8F8"  	
+	        />
+	</LinearLayout>
 </LinearLayout>
