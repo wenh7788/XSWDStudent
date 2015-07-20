@@ -66,4 +66,8 @@ public class CommonView {
 		txtbase_top_mid.setText(str);
 	}
 	
+	public void SetBaseTopRight(String str)
+	{
+		txtbase_top_right.setText(str);
+	}
 }

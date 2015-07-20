@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#fff"
+    >
+    <include
+        android:id="@+id/base_top"
+        layout="@layout/activity_base_top"
+        />
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dp"
+	    android:orientation="vertical"
+	    android:background="#ebecee"
+	    android:paddingLeft="30dp"
+	    android:paddingRight="30dp"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"	    	    
+	    >
+
+	    <EditText 
+	        android:id="@+id/edt_search"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:hint="搜索"
+			android:background="@drawable/editview_search_shape"
+	        android:gravity="center"
+	        android:textColorHint="#ddd"
+	        android:textSize="14sp"
+	        />
+	</LinearLayout>
+	<!-- 1_分割线 -->
+    <TextView
+        style="@style/dicator_line_1"
+        />
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dp"
+	    android:orientation="vertical"
+	    android:background="#f7f7f7"
+	    android:paddingLeft="30dp"
+	    android:paddingRight="30dp"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"	    	    
+	    >
+		<TextView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:text="选择问题分类"
+		    android:drawableRight="@drawable/arraw_right"
+		    android:gravity="center|left"
+		    />
+	</LinearLayout>
+	<!-- 1_分割线 -->
+    <TextView
+        style="@style/dicator_line_1"
+        />
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:background="#f7f7f7"
+	    android:paddingLeft="30dp"
+	    android:paddingRight="30dp"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"	    	    
+	    >
+	
+	    <ListView
+	        android:id="@+id/listhomework"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+			android:cacheColorHint="#FFEDEDED" 
+			android:divider="#F7f7f7" 		
+			android:dividerHeight="20px"    
+			android:background="#F7f7f7"    
+	        />
+	
+	</LinearLayout>
+
+</LinearLayout>

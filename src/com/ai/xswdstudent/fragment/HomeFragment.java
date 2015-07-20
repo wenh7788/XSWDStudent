@@ -6,10 +6,18 @@ import java.util.List;
 
 
 
+
+
+
+
+
+
 import com.ai.xswdstudent.R;
 import com.ai.xswdstudent.activity.CitySelectActivity;
+import com.ai.xswdstudent.activity.HomeWorkActivity;
 import com.ai.xswdstudent.adapter.Ad_Adapter;
 import com.ai.xswdstudent.util.LruImageCache;
+import com.ai.xswdstudent.util.QRImageUtil;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
@@ -21,13 +29,18 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 import com.viewpagerindicator.CirclePageIndicator;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -49,7 +62,13 @@ public class HomeFragment extends Fragment{
 	@ViewInject(R.id.indicator_ad)
 	private CirclePageIndicator indicator_ad;
 	
-	private RequestQueue mQueue; //volley 
+	@ViewInject(R.id.btnscan)
+	private Button btnscan;
+	
+	@ViewInject(R.id.btnhomework)
+	private Button btnhomework;
+	
+	
 	//存放从远程获得广告图片
 	private List<ImageView> listAdView=new ArrayList<ImageView>();
 	//广告图片adapter
@@ -90,6 +109,8 @@ public class HomeFragment extends Fragment{
 
 		initViewPager();
 
+		//这句是生产二维码的：先暂时写在这里，其实后面是需要动态生成某个人的二维码链接的（我的-个人信息）。
+		//imgsearch.setImageBitmap(QRImageUtil.createQRImage("http://www.baidu.com/"));
 	}
 
 	@Override
@@ -138,4 +159,49 @@ public class HomeFragment extends Fragment{
 		Intent intent=new Intent(getActivity(),CitySelectActivity.class);
 		startActivity(intent);
 	}
+	
+	//扫描上课
+	@OnClick(R.id.btnscan)
+	public void onBtnScanClick(View v)
+	{
+		
+		btnscan.setTextColor(Color.rgb(247, 134, 66));
+		btnhomework.setTextColor(Color.rgb(68, 68, 68));
+		
+		Drawable drawable;
+		drawable=getActivity().getResources().getDrawable(R.drawable.smsk_sel);  
+		drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());  
+		btnscan.setCompoundDrawables(drawable,null,null,null);
+		
+		drawable=getActivity().getResources().getDrawable(R.drawable.zysq_nor);  
+		drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());  
+		btnhomework.setCompoundDrawables(drawable,null,null,null);
+		
+		
+		
+		
+	}
+	//作业神器
+	@OnClick(R.id.btnhomework)
+	public void onBtnHomeWorkClick(View v)
+	{
+		
+		btnscan.setTextColor(Color.rgb(68, 68, 68));
+		btnhomework.setTextColor(Color.rgb(247, 134, 66));
+		
+		Drawable drawable;
+		drawable=getActivity().getResources().getDrawable(R.drawable.smsk_nor);  
+		drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());  
+		btnscan.setCompoundDrawables(drawable,null,null,null);
+		
+		drawable=getActivity().getResources().getDrawable(R.drawable.zysq_sel);  
+		drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());  
+		btnhomework.setCompoundDrawables(drawable,null,null,null);
+	
+		//跳转到作业神器页面
+		
+		Intent intent=new Intent(getActivity(),HomeWorkActivity.class);
+		startActivity(intent);
+	}
+
 }

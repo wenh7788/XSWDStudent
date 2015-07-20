@@ -38,6 +38,7 @@ public class MsgSysNoReadActivity extends BaseActivity{
 		ViewUtils.inject(this); //xutils必须加的
 		
 		initView();
+		System.out.println("MsgSysNoReadActivity.class----消息-未读消息");
 	}
 
 	private void initView()

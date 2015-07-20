@@ -34,7 +34,7 @@ public class MsgSysAllActivity extends BaseActivity{
 
 		ViewUtils.inject(this); //xutils必须加的
 		initView();
-
+		System.out.println("MsgSysAllActivity.class----消息-全部消息");
 	}
 
 	
