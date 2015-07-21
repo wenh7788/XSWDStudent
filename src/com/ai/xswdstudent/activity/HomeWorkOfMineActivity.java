@@ -14,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ai.xswdstudent.R;
-import com.ai.xswdstudent.adapter.Classify2_Adapter;
 import com.ai.xswdstudent.adapter.HomeWork_Adapter;
 import com.ai.xswdstudent.baseactivity.BaseActivity;
 import com.lidroid.xutils.ViewUtils;
@@ -22,29 +21,37 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 import com.lidroid.xutils.view.annotation.event.OnItemClick;
 
-public class HomeWorkActivity extends BaseActivity{
+public class HomeWorkOfMineActivity extends BaseActivity{
 
+	
     @ViewInject(R.id.txtbase_top_left)
     private TextView txtbase_top_left;
-    
+    @ViewInject(R.id.txtbase_top_right)
+    private TextView txtbase_top_right;
+		
+    	
     @ViewInject(R.id.listhomework)	
     private ListView listhomework;
 	
     List<Map<String, Object>> listHomeWorkData=new ArrayList<Map<String,Object>>();
     
-
+    
+    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		System.out.println("HomeWorkActivity---作业神器");
-		setContentView(R.layout.activity_homework);
+		System.out.println("HomeWorkOfMineActivity---我的提问");		
+		setContentView(R.layout.activity_homeworkofmine);
+		
 		ViewUtils.inject(this); //xutils必须加的
 		
-		setTitle("作业神器");
-		setRightTitle("我的提问");
+		setTitle("我的提问");
+		setRightTitle("提问");
 		setRightBackGround(R.drawable.txt_top_right_tjzy_selector);
 		initView();
+		
+		
 	}
 
 	private void initView()
@@ -54,8 +61,8 @@ public class HomeWorkActivity extends BaseActivity{
 		HomeWork_Adapter homework_adapter=new HomeWork_Adapter(listHomeWorkData,this,listhomework);
 		
 		listhomework.setAdapter(homework_adapter);
+		
 	}
-	
 	private void initListHomeWorkData()
 	{
 
@@ -130,31 +137,14 @@ public class HomeWorkActivity extends BaseActivity{
 		listHomeWorkData.add(map3);
 		listHomeWorkData.add(map4);
 		
-	}
+	}	
 	
 	@OnItemClick(R.id.listhomework)  
     public void itemClick_listHomeWork(AdapterView<?> parent, View view, int position,long id) {  
-       
 		//记得传递参数，类似homeworkid
 		Intent intent =new Intent(this,HomeWorkDetailsActivity.class);
 		startActivity(intent);
-		
-		
-//		if (listClassify2Data.get(position)!=null && listClassify2Data.get(position).size()>0) {
-//			
-//			classify2_Adapter=new Classify2_Adapter(listClassify2Data.get(position), getActivity());
-//			listclassify2.setAdapter(classify2_Adapter);
-//			
-//			listclassify2.setVisibility(View.VISIBLE);
-//			listclassify3.setVisibility(View.INVISIBLE);
-//		}
-//		else {
-//			listclassify2.setVisibility(View.INVISIBLE);
-//			listclassify3.setVisibility(View.INVISIBLE);
-//			Toast.makeText(getActivity(), "没有数据", Toast.LENGTH_SHORT).show();
-//		}
-
-    } 
+    } 	
 	
 	
     @OnClick(R.id.txtbase_top_left)
@@ -165,9 +155,6 @@ public class HomeWorkActivity extends BaseActivity{
     @OnClick(R.id.txtbase_top_right)
     public void onBaseTopRight(View v)
     {
-    	Intent intent=new Intent(this,HomeWorkOfMineActivity.class);
-    	startActivity(intent);
-        Toast.makeText(this, "跳转到我的提问页面", Toast.LENGTH_SHORT).show();
-    }	
-    
+        Toast.makeText(this, "跳转到提问页面", Toast.LENGTH_SHORT).show();
+    }
 }

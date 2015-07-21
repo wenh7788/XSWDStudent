@@ -2,9 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
+    android:orientation="vertical"
     android:background="#fff"
-    >
+     >
+    
+    <include
+        android:id="@+id/base_top"
+        layout="@layout/activity_base_top"
+        />
 	<LinearLayout 
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
@@ -37,7 +42,7 @@
 	                android:layout_width="fill_parent"
 	                android:layout_height="0dp"
 	                android:layout_weight="2"
-					android:orientation="vertical"
+	
 	                >
 	                <TextView 
 	                    android:id="@+id/txtusername"
@@ -175,24 +180,24 @@
 			    />			    				    		
 	    </LinearLayout>	    	    
 	</LinearLayout>
-	<!-- 1_分割线 -->
-    <TextView
-        style="@style/dicator_line_1"
-        android:layout_marginTop="10dp"
-        />
 	<LinearLayout 
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
+	    android:layout_height="fill_parent"
 	    android:orientation="vertical"
+	    android:background="#f7f7f7"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"	    	    
 	    >
-	    <TextView
-	        android:id="@+id/txtanswercount" 
+	
+	    <ListView
+	        android:id="@+id/listhomeworkdetails"
 	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:text="已有三位老师回答了你的问题"
-	        android:textColor="#f78642"
-	        android:gravity="center|left"
-	        android:drawableRight="@drawable/arraw_right"
+	        android:layout_height="fill_parent"
+			android:cacheColorHint="#FFEDEDED" 
+			android:divider="#F7f7f7" 		
+			android:dividerHeight="20px"    
+			android:background="#F7f7f7"    
 	        />
-	</LinearLayout>  
+	
+	</LinearLayout>
 </LinearLayout>

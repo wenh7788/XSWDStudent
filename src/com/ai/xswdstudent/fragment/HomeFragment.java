@@ -14,6 +14,8 @@ import java.util.List;
 
 import com.ai.xswdstudent.R;
 import com.ai.xswdstudent.activity.CitySelectActivity;
+import com.ai.xswdstudent.activity.KcThcherFenleiActivity;
+import com.ai.xswdstudent.activity.TcherActivity;
 import com.ai.xswdstudent.activity.HomeWorkActivity;
 import com.ai.xswdstudent.adapter.Ad_Adapter;
 import com.ai.xswdstudent.util.LruImageCache;
@@ -50,7 +52,7 @@ import android.widget.RelativeLayout.LayoutParams;
 
 public class HomeFragment extends Fragment{
 
-	private View rootView; //»º´æfragment view
+	private View rootView; //ç¼“å­˜fragment view
 	
 	@ViewInject(R.id.imgsearch)
 	private ImageView imgsearch;
@@ -69,12 +71,19 @@ public class HomeFragment extends Fragment{
 	private Button btnhomework;
 	
 	
-	//´æ·Å´ÓÔ¶³Ì»ñµÃ¹ã¸æÍ¼Æ¬
+	   @ViewInject(R.id.btntjls)
+    private Button btn_techer;  //ÂµÃ£Â»Ã·Ã€ÃÃŠÂ¦ÃˆÃÂ¿Ã
+	   
+
+       @ViewInject(R.id.btntjkc)
+    private Button btn_jkc;  //ÂµÃ£Â»Ã·Ã€ÃÃŠÂ¦ÃˆÃÂ¿Ã
+
+	//Â´Ã¦Â·Ã…Â´Ã“Ã”Â¶Â³ÃŒÂ»Ã±ÂµÃƒÂ¹Ã£Â¸Ã¦ÃÂ¼Ã†Â¬
 	private List<ImageView> listAdView=new ArrayList<ImageView>();
-	//¹ã¸æÍ¼Æ¬adapter
+	//å¹¿å‘Šå›¾ç‰‡adapter
 	private Ad_Adapter ad_Adapter;
 	
-	//²âÊÔÊı¾İ_ºóÃæÉ¾³ı
+	//æµ‹è¯•æ•°æ®_åé¢åˆ é™¤
 	private List<String> listImagepath;
 	
 	@Override
@@ -92,10 +101,10 @@ public class HomeFragment extends Fragment{
 		
 		
 //		View view=inflater.inflate(R.layout.fragment_home, null);	
-//		ViewUtils.inject(this, view); //xutils±ØĞë¼ÓµÄ
+//		ViewUtils.inject(this, view); //xutilså¿…é¡»åŠ çš„
 
 
-		ViewUtils.inject(this, rootView); //xutils±ØĞë¼ÓµÄ
+		ViewUtils.inject(this, rootView); //xutilså¿…é¡»åŠ çš„
 		return 	rootView;
 		
 	}
@@ -109,7 +118,7 @@ public class HomeFragment extends Fragment{
 
 		initViewPager();
 
-		//Õâ¾äÊÇÉú²ú¶şÎ¬ÂëµÄ£ºÏÈÔİÊ±Ğ´ÔÚÕâÀï£¬ÆäÊµºóÃæÊÇĞèÒª¶¯Ì¬Éú³ÉÄ³¸öÈËµÄ¶şÎ¬ÂëÁ´½ÓµÄ£¨ÎÒµÄ-¸öÈËĞÅÏ¢£©¡£
+		//è¿™å¥æ˜¯ç”Ÿäº§äºŒç»´ç çš„ï¼šå…ˆæš‚æ—¶å†™åœ¨è¿™é‡Œï¼Œå…¶å®åé¢æ˜¯éœ€è¦åŠ¨æ€ç”ŸæˆæŸä¸ªäººçš„äºŒç»´ç é“¾æ¥çš„ï¼ˆæˆ‘çš„-ä¸ªäººä¿¡æ¯ï¼‰ã€‚
 		//imgsearch.setImageBitmap(QRImageUtil.createQRImage("http://www.baidu.com/"));
 	}
 
@@ -123,7 +132,7 @@ public class HomeFragment extends Fragment{
 
 	
 	private void initViewPager() {
-		//ÒÔºóÒªÉ¾³ı
+		//ä»¥åè¦åˆ é™¤
 		listImagepath=new ArrayList<String>();
 		listImagepath.add("https://www.baidu.com/img/bd_logo1.png");
 		listImagepath.add("https://www.baidu.com/img/bd_logo1.png");
@@ -149,18 +158,36 @@ public class HomeFragment extends Fragment{
 	@OnClick(R.id.imgsearch)
 	public void onImgSearchClick(View v)
 	{
-		Toast.makeText(getActivity(), "µã»÷ËÑË÷", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getActivity(), "ç‚¹å‡»æœç´¢", Toast.LENGTH_SHORT).show();
 	}
+	
+	@OnClick(R.id.btntjls)
+    public void oncherClick(View v)
+    {
+        Toast.makeText(getActivity(), "ÂµÃ£Â»Ã·Ã€ÃÃŠÂ¦", Toast.LENGTH_SHORT).show();
+        
+        Intent intent=new Intent(getActivity(),TcherActivity.class);
+        startActivity(intent);
+    }
 	
 	@OnClick(R.id.txtcity)
 	public void onTxtCityClick(View v)
 	{
-		Toast.makeText(getActivity(), "Ñ¡Ôñ³ÇÊĞ", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getActivity(), "é€‰æ‹©åŸå¸‚", Toast.LENGTH_SHORT).show();
 		Intent intent=new Intent(getActivity(),CitySelectActivity.class);
 		startActivity(intent);
 	}
+	  //Ã‘Â¡Ã”Ã±Â¿ÃÂ³ÃŒ
 	
-	//É¨ÃèÉÏ¿Î
+	   @OnClick(R.id.btntjkc)
+	    public void ontClick(View v)
+	    {
+	        Toast.makeText(getActivity(), "Ã‘Â¡Ã”Ã±Â¿ÃÂ³ÃŒÃ€ÃÃŠÂ¦", Toast.LENGTH_SHORT).show();
+	        Intent intent=new Intent(getActivity(),KcThcherFenleiActivity.class);
+	        startActivity(intent);
+	    }
+	
+	//æ‰«æä¸Šè¯¾
 	@OnClick(R.id.btnscan)
 	public void onBtnScanClick(View v)
 	{
@@ -181,7 +208,7 @@ public class HomeFragment extends Fragment{
 		
 		
 	}
-	//×÷ÒµÉñÆ÷
+	//ä½œä¸šç¥å™¨
 	@OnClick(R.id.btnhomework)
 	public void onBtnHomeWorkClick(View v)
 	{
@@ -198,7 +225,7 @@ public class HomeFragment extends Fragment{
 		drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());  
 		btnhomework.setCompoundDrawables(drawable,null,null,null);
 	
-		//Ìø×ªµ½×÷ÒµÉñÆ÷Ò³Ãæ
+		//è·³è½¬åˆ°ä½œä¸šç¥å™¨é¡µé¢
 		
 		Intent intent=new Intent(getActivity(),HomeWorkActivity.class);
 		startActivity(intent);

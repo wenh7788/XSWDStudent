@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE"
+    android:orientation="vertical" >
+
+    <!-- person_shape.xml -->
+
+    <include layout="@layout/wx_common_title" />
+
+   <!--  <EditText
+        android:id="@+id/et_upusername"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/heditview_shape" >
+    </EditText>-->
+    
+    
+    
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wtbg" 
+              android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_weight="1"
+               android:layout_height="wrap_content"
+            android:text="亲，你遇到什么问题啦，或者有什么功能建议吗？欢迎提给我们，谢谢！"
+            android:textSize="18dp"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/heditview_shape" 
+              android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_weight="1"
+               android:layout_height="wrap_content"
+            android:text="姓名："
+            android:textSize="20dp"
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginRight="15dp"
+            android:layout_weight="4" >
+        </EditText>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_margin="5dp"
+      
+        android:layout_height="wrap_content"
+        android:background="@drawable/heditview_shape" 
+              android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_weight="1"
+               android:layout_height="wrap_content"
+            android:text="电话："
+            android:textSize="20dp"
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/et__uphone"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginRight="15dp"
+            android:layout_weight="4" >
+        </EditText>
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/heditview_shape" 
+              android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_weight="1"
+               android:layout_height="wrap_content"
+            android:text="问题："
+            android:textSize="20dp"
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/et__content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="4" >
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/btn_updatesl"
+        android:text="提交反馈"
+        android:textColor="@color/white" />
+
+</LinearLayout>
