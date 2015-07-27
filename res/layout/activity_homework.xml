@@ -35,7 +35,8 @@
     <TextView
         style="@style/dicator_line_1"
         />
-	<LinearLayout 
+	<LinearLayout
+	    android:id="@+id/llayoutcourse" 
 	    android:layout_width="fill_parent"
 	    android:layout_height="50dp"
 	    android:orientation="vertical"

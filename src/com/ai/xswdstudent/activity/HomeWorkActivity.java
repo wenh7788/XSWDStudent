@@ -30,6 +30,9 @@ public class HomeWorkActivity extends BaseActivity{
     @ViewInject(R.id.listhomework)	
     private ListView listhomework;
 	
+    @ViewInject(R.id.llayoutcourse)	
+    private ListView llayoutcourse;
+    
     List<Map<String, Object>> listHomeWorkData=new ArrayList<Map<String,Object>>();
     
 
@@ -169,5 +172,14 @@ public class HomeWorkActivity extends BaseActivity{
     	startActivity(intent);
         Toast.makeText(this, "跳转到我的提问页面", Toast.LENGTH_SHORT).show();
     }	
+    
+    @OnClick(R.id.llayoutcourse)
+    public void onLLayoutCourseClick(View v)
+    {
+    	
+    	Intent intent=new Intent(this,CourseWheelActivity.class);
+    	startActivity(intent);
+    }
+    
     
 }

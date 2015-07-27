@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:orientation="vertical" >
+
+    <include layout="@layout/activity_base_top" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="8dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 课程图片 -->
+
+            <ImageView
+                android:id="@+id/img_course"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/img_course" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/img_course" >
+
+                <TextView
+                    android:id="@+id/txt_course_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="赵霏儿"
+                    android:textSize="@dimen/my_order_class_font_size_13" />
+
+                <TextView
+                    android:id="@+id/txt_authen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/txt_course_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/txt_course_name"
+                    android:drawableLeft="@drawable/img_authen"
+                    android:text="3项认证"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/txt_teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_course_name"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:text="学习阶段：初中二年级"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/my_order_class_font_size_12" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <RatingBar
+                android:id="@+id/rb_teach_attitude"
+                style="@style/ratingbarStylelt"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:numStars="5" />
+
+            <TextView
+                android:id="@+id/txt_class_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="这里显示学生的邢敏"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- 上课方式 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="2dp"
+                android:text="学生姓名:"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="¥400.00"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+        </LinearLayout>
+
+        <!-- 上课地点 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="2dp"
+                android:text="联系电话:"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="18021832061"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+        </LinearLayout>
+
+        <!-- 上课时间 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="3dp"
+                
+                android:text="联系邮箱:"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+
+         
+
+                <TextView
+                    android:id="@+id/txt_start_class_time_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="947997381@qq.com"
+                    android:textSize="@dimen/my_order_class_font_size_12" />
+            
+        </LinearLayout>
+        
+        
+        
+        
+             <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="2dp"
+                android:text="出生日期："
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="18021832061"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+        </LinearLayout>
+        
+             
+             
+                  <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="2dp"
+                android:text="兴趣爱好："
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+
+            <TextView
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="18021832061"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+        </LinearLayout>
+        
+        
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- 上课方式 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="个人说明"
+                android:textSize="@dimen/my_order_class_font_size_12" />
+        </LinearLayout>
+
+        <!-- 上课地点 -->
+
+
+        <!-- 上课时间 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/comtent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1111111111111111111111111111111111111111111111111111111111111111111111111"
+                    android:textSize="@dimen/my_order_class_font_size_12" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

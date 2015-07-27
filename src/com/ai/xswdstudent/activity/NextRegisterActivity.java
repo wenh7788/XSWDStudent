@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.ai.xswdstudent.R;
+import com.ai.xswdstudent.activity.login.LoginActivity;
 import com.ai.xswdstudent.baseactivity.BaseActivity;
 import com.ai.xswdstudent.xsaplication.StringUtil;
 import com.lidroid.xutils.HttpUtils;

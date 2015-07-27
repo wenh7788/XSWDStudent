@@ -156,5 +156,7 @@ public class HomeWorkOfMineActivity extends BaseActivity{
     public void onBaseTopRight(View v)
     {
         Toast.makeText(this, "跳转到提问页面", Toast.LENGTH_SHORT).show();
+        Intent intent=new Intent(this,HomeWorkQuestionsActivity.class);
+        startActivity(intent);
     }
 }

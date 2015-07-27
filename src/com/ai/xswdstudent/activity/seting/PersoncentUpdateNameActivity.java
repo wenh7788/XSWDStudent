@@ -1,4 +1,4 @@
-package com.ai.xswdstudent.activity;
+package com.ai.xswdstudent.activity.seting;
 
 import android.content.Intent;
 import android.os.Bundle;

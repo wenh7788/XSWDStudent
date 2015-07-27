@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -209,5 +210,14 @@ public class HomeWorkDetailsActivity extends BaseActivity{
     public void onBaseTopRight(View v)
     {
         Toast.makeText(this, "点击删除", Toast.LENGTH_SHORT).show();
+        
+        Intent intent=new Intent(this,DelActivity.class);
+        
+        intent.putExtra("flag", "HomeWorkDetailsActivity");
+        intent.putExtra("title", "提示");
+        intent.putExtra("content", "你确定要删除此条提问吗？");
+        
+        startActivity(intent);
+        
     }
 }

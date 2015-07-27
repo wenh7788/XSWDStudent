@@ -10,8 +10,12 @@ import com.ai.xswdstudent.adapter.MsgSysAll_Adapter;
 import com.ai.xswdstudent.baseactivity.BaseActivity;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.lidroid.xutils.view.annotation.event.OnItemClick;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 
@@ -34,7 +38,7 @@ public class MsgSysAllActivity extends BaseActivity{
 
 		ViewUtils.inject(this); //xutils必须加的
 		initView();
-		System.out.println("MsgSysAllActivity.class----消息-全部消息");
+		System.out.println("MsgSysAllActivity.class----??-????");
 	}
 
 	
@@ -53,28 +57,28 @@ public class MsgSysAllActivity extends BaseActivity{
 	{
 		
 		Map<String, Object> map1=new HashMap<String, Object>();
-		map1.put("msgtype", "系统消息");
+		map1.put("msgtype", "????");
 		map1.put("msgtime", "2015-07-18");
-		map1.put("msgcontent", "你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三");
-		map1.put("dotype", "去看看");
+		map1.put("msgcontent", "??,????,????,????,????,????,????,????,????,??");
+		map1.put("dotype", "???");
 		
 		Map<String, Object> map2=new HashMap<String, Object>();
-		map2.put("msgtype", "系统消息");
+		map2.put("msgtype", "????");
 		map2.put("msgtime", "2015-07-18");
-		map2.put("msgcontent", "你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三");
-		map2.put("dotype", "去支付");
+		map2.put("msgcontent", "??,????,????,????,????,????,????,????,????,??");
+		map2.put("dotype", "???");
 		
 		Map<String, Object> map3=new HashMap<String, Object>();
-		map3.put("msgtype", "系统消息");
+		map3.put("msgtype", "????");
 		map3.put("msgtime", "2015-07-18");
-		map3.put("msgcontent", "你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三");
+		map3.put("msgcontent", "??,????,????,????,????,????,????,????,????,??");
 		map3.put("dotype", "");
 		
 		Map<String, Object> map4=new HashMap<String, Object>();
-		map4.put("msgtype", "系统消息");
+		map4.put("msgtype", "????");
 		map4.put("msgtime", "2015-07-18");
-		map4.put("msgcontent", "你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三你好，张三");
-		map4.put("dotype", "去看看");
+		map4.put("msgcontent", "??,????,????,????,????,????,????,????,????,??");
+		map4.put("dotype", "???");
 		
 		listMsgSysAllData.add(map1);
 		listMsgSysAllData.add(map2);
@@ -82,5 +86,11 @@ public class MsgSysAllActivity extends BaseActivity{
 		listMsgSysAllData.add(map4);
 		
 	}
-
+	@OnItemClick(R.id.listmsgsysall)  
+    public void itemClick_listMsgSysAll(AdapterView<?> parent, View view, int position,long id) {  
+       
+		//记得传递参数，类似homeworkid
+		Intent intent =new Intent(this,MsgDetailsActivity.class);
+		startActivity(intent);
+	}
 }

@@ -1,0 +1,615 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE"
+    android:orientation="vertical" >
+
+    <!-- 购买课程 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ly1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/person_shape"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/tv_Persona_view"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/wtbg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/img_Persona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_weight="1"
+                    android:text="课程标题"
+                    android:textColor="@color/gray_686868_color" />
+
+                <TextView
+                    android:id="@+id/tv_Personal_list"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:text="个人资料"
+                    android:textColor="@color/common_title_454545_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/jiantougren" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dip"
+                android:background="#DDD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/wtbg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_weight="1"
+                    android:text="上课方式"
+                    android:textColor="@color/gray_686868_color" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:text="个人资料"
+                    android:textColor="@color/common_title_454545_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/jiantougren" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dip"
+                android:background="#DDD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="@drawable/wtbg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_weight="1"
+                    android:text="上课地址"
+                    android:textColor="@color/gray_686868_color" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="2"
+                    android:text="个人资料个人资料个人资料"
+                    android:textColor="@color/common_title_454545_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dip"
+                android:background="#DDD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/wtbg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_weight="1"
+                    android:text="课程时长"
+                    android:textColor="@color/gray_686868_color" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="2"
+                    android:text="0709  1200"
+                    android:textColor="@color/common_title_454545_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dip"
+                android:background="#DDD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/wtbg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_weight="1"
+                    android:text="上课方式"
+                    android:textColor="@color/gray_686868_color" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:text="个人资料"
+                    android:textColor="@color/common_title_454545_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/downhui" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#DDD" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#DDD" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:background="@drawable/wtbg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_weight="1"
+                    android:text="上课方式"
+                    android:textColor="@color/gray_686868_color" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:text="个人资料"
+                    android:textColor="@color/common_title_454545_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/downhui" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="#DDD" />
+            
+            
+            
+            
+    <!-- 课程表 -->       
+            
+            
+
+
+        <LinearLayout
+            android:id="@+id/llyt_duty_info_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_little_blue_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="        "
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_little_blue_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="周一"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_little_blue_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="周二"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_little_blue_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="周三"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_little_blue_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="周四"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_little_blue_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="周五"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_little_blue_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="周六"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_little_blue_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="周日"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/rectangle_white_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="上午"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_1"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_2"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_3"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_4"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_5"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_6"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_7"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/rectangle_white_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="中午"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_8"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_9"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_10"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_11"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_12"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_13"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_14"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/rectangle_white_gray"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:text="晚上"
+                    android:textColor="#ff000000"
+                    android:textSize="14sp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_15"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_16"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_17"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_18"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_19"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_20"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+
+                <CheckBox
+                    android:id="@+id/chb_dutyinfo_21"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_gray_check"
+                    android:button="@null"
+                    android:padding="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+            
+    
+       
+            
+
+        <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView 
+            android:id="@+id/txt_one_to_one"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@color/blue"
+            android:text="400"
+            android:textSize="@dimen/my_order_class_font_size_13"
+            android:textColor="@color/white"/>
+        <TextView 
+            android:id="@+id/txt_appoint_course"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="8dp"
+            android:background="@color/orange"
+            android:text="立即购买"
+            android:textSize="@dimen/my_order_class_font_size_13"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

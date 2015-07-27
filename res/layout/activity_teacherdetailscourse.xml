@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical" 
+    android:background="#ebebeb"
+    >
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff"
+        >
+ 
+       
+		<GridView 
+		  android:id="@+id/gvcourse"  
+		  android:layout_width="fill_parent"  
+		  android:layout_height="wrap_content"  
+		  android:columnWidth="90dp"  
+		  android:numColumns="7"  
+		  android:horizontalSpacing="1dp"  
+		  android:verticalSpacing="1dp"  
+		  android:stretchMode="columnWidth"  
+		  android:gravity="center"
+
+		  />
+
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+			<TextView 
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="上午（8:00-12:00）"
+			    android:textSize="10sp"
+			    android:gravity="center"
+			    />            
+			<TextView 
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="下午（13:00-18:00）"
+				android:textSize="10sp"
+				android:gravity="center"
+			    />  
+			<TextView 
+			    android:layout_width="0dp"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="1"
+			    android:text="晚上（19:00-22:00）"
+			    android:textSize="10sp"
+			    android:gravity="center"
+			    />  			                
+        </LinearLayout>
+    </LinearLayout>
+	<ListView 
+        android:id="@+id/listcourse"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+		android:cacheColorHint="#FFEDEDED" 
+		android:divider="#ccc" 
+		android:dividerHeight="1dp"	
+	    />
+</LinearLayout>

@@ -46,7 +46,6 @@ public class BakeContentActivity  extends  BaseActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.back_content);
         ViewUtils.inject(this); //xutils必加语句在      使用注解绑定控件的时候，一定记得在onCreate中调用
-        setTitle("注册");
         commontitle.setText("意见反馈");
       
     }

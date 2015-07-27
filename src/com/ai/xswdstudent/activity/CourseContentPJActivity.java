@@ -6,9 +6,12 @@ import com.ai.xswdstudent.R;
 import com.ai.xswdstudent.baseactivity.BaseActivity;
 
 
-public class AboutUsActivity extends BaseActivity
+public class CourseContentPJActivity extends BaseActivity
 {
-    
+    /**
+     * 
+     * ¿Î³ÌÆÀ¼Û
+     * */
     private TextView aboutTextview = null;
     
     private TextView mVersionView;
@@ -38,7 +41,7 @@ public class AboutUsActivity extends BaseActivity
     
     public int getActivityLayout()
     {
-        return R.layout.ysh_aboutus_activity;
+        return R.layout.activity_course_comment;
     }
     
 }

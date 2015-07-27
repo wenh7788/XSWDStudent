@@ -11,6 +11,46 @@
     <!-- xutils权限 -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 二维码 -->
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+
+    <!-- Donut-specific flags which allow us to run on any dpi screens. -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +73,20 @@
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan" >
         </activity>
+        
+        
+         <activity
+            android:name="com.ai.xswdstudent.activity.CollectionActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.ai.xswdstudent.activity.seting.AboutUsActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+        
         <activity
             android:name="com.ai.xswdstudent.activity.NextRegisterActivity"
             android:label="@string/app_name"
@@ -43,6 +97,56 @@
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan" >
         </activity>
+        
+        <activity
+            android:name="com.ai.xswdstudent.activity.BakeContentActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+            
+        </activity>
+        
+   <activity
+            android:name="com.ai.xswdstudent.activity.seting.ModifyPasswordActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+   
+  <!-- 修改密码总页面   ChangePwdZActivity-->
+  
+       
+   <activity
+            android:name="com.ai.xswdstudent.activity.seting.ChangePwdZActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+  
+        <!-- 二维码-->
+
+        <activity
+            android:name=".core.CaptureActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" /> 
+            
+        <!-- 个人主页  com.ai.xswdstudent.activity-->
+          <activity
+            android:name="com.ai.xswdstudent.activity.PersonPageActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" /> 
+  
+        
+            <activity
+            android:name="com.ai.xswdstudent.activity.TcherActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        
+                   <activity
+            android:name="com.ai.xswdstudent.activity.KcThcherFenleiActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+            
         <activity
             android:name="com.ai.xswdstudent.activity.ForgetPassword"
             android:label="@string/app_name"
@@ -59,18 +163,145 @@
             android:windowSoftInputMode="adjustPan" >
         </activity>
         <activity
-            android:name="com.ai.xswdstudent.activity.PersoncentUpdateNameActivity"
+            android:name="com.ai.xswdstudent.activity.seting.PersoncentUpdateNameActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan" >
         </activity>
-        
+               <activity
+            android:name="com.ai.xswdstudent.activity.MyOderListActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
                <activity
             android:name="com.ai.xswdstudent.activity.MyOrederActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan" >
         </activity>
         
+        <!-- 系统全部消息 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.MsgSysAllActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
         
+        <!-- 系统未读消息 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.MsgSysNoReadActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity> 
+        <!-- 作业神器 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.HomeWorkActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity> 
+        <!-- 我的提问 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.HomeWorkOfMineActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>        
+        <!-- 问题详情 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.HomeWorkDetailsActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>  
+        <!-- 课程评价 -->
+        
+            <activity
+            android:name="com.ai.xswdstudent.activity.CourseContentPJActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 申请退款 -->
+                 <activity
+            android:name="com.ai.xswdstudent.activity.RefundMoneyActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 删除对话框 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.DelActivity"
+            android:label="@string/app_name"
+			android:theme = "@style/dialogstyle"
+            android:windowSoftInputMode="adjustPan" >
+        </activity> 
+        <!-- 我的评价 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.MyJudgeActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>  
+        <!-- 我的评价————老师对我 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.JudgeToMeActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 我的评价————我对老师 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.JudgeToTeacherActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <!-- 老师详情 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.TeacherDetailsActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>        
+        <!-- 老师详情——简介 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.TeacherDetailsIntroduceActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>   
+        <!-- 老师详情——课程 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.TeacherDetailsCourseActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>   
+        <!-- 老师详情_评价 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.TeacherDetailsJudgeActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>           
+        <!-- 消息详情 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.MsgDetailsActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>    
+        <!-- 我的提问——提问 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.HomeWorkQuestionsActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity> 
+        <!-- 我的_钱包 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.WalletActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity> 
+        <!--作业神器————科目选择 对话框 -->
+        <activity
+            android:name="com.ai.xswdstudent.activity.CourseWheelActivity"
+            android:label="@string/app_name"
+			android:theme = "@style/dialogstyle"
+            android:windowSoftInputMode="adjustPan" >
+        </activity> 
+        <!-- 修改性别-->
+        <activity
+            android:name="com.ai.xswdstudent.activity.seting.UpdateSexActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>      
     </application>
 
 </manifest>

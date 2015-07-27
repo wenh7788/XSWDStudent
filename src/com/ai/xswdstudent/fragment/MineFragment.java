@@ -13,12 +13,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ai.xswdstudent.R;
-import com.ai.xswdstudent.activity.AboutUsActivity;
 import com.ai.xswdstudent.activity.BakeContentActivity;
 import com.ai.xswdstudent.activity.CollectionActivity;
+import com.ai.xswdstudent.activity.MyJudgeActivity;
 import com.ai.xswdstudent.activity.MyOderListActivity;
 import com.ai.xswdstudent.activity.MyOrederActivity;
+import com.ai.xswdstudent.activity.PersonPageActivity;
 import com.ai.xswdstudent.activity.PersoncentActivity;
+import com.ai.xswdstudent.activity.WalletActivity;
+import com.ai.xswdstudent.activity.seting.AboutUsActivity;
+import com.ai.xswdstudent.activity.seting.ChangePwdZActivity;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
@@ -41,6 +45,12 @@ public class MineFragment extends Fragment  implements OnClickListener
     
     @ViewInject(R.id.myorder_view)
     public  LinearLayout lyorder;
+    
+    
+    @ViewInject(R.id. my_xiugaimpwd_ly)
+    public  LinearLayout xiugaipwd;
+    
+   
     @ViewInject(R.id.txtcity)
     private TextView txtcity;
     
@@ -58,8 +68,15 @@ public class MineFragment extends Fragment  implements OnClickListener
     @ViewInject(R.id.my_shouchang_ly)
     public  LinearLayout shouchang;
     
+    //我的评价
+    @ViewInject(R.id.my_pingjia_ly)
+    public  LinearLayout my_pingjia_ly;
+    //我的钱包
+    @ViewInject(R.id.Order_view)
+    public  LinearLayout Order_view;    
     
-    
+	@ViewInject(R.id.tv_zhuye)
+    private TextView zhuye;
     //鍙嶉
     @ViewInject(R.id.my_yijianfankui_ly)
     public  LinearLayout fankui;
@@ -92,6 +109,7 @@ private void bindListener()
     jianchaupdate.setOnClickListener(this);
     shouchang.setOnClickListener(this);
     fankui.setOnClickListener(this);
+    xiugaipwd.setOnClickListener(this);
         
     }
 
@@ -116,13 +134,24 @@ private void bindListener()
     @OnClick(R.id.tv_Persona_view)
     public void onImgSearchClick(View v)
     {
-        Toast.makeText(getActivity(), "鐐瑰嚮鎼滅储", Toast.LENGTH_SHORT).show();
         Intent inten = new Intent();
       inten.setClass(getActivity(), PersoncentActivity.class);
      startActivity(inten);
         
     }
     
+	    @OnClick(R.id.tv_zhuye)
+    public void onzhuyeClick(View v)
+    {
+        Toast.makeText(getActivity(), "个人主页", Toast.LENGTH_SHORT).show();
+        Intent inten = new Intent();
+      inten.setClass(getActivity(), PersonPageActivity.class);
+     startActivity(inten);
+        
+    }
+    
+	
+	
     //鎴戠殑璁㈠崟
     @OnClick(R.id.myorder_view)
     public void onOrderClick(View v)
@@ -131,6 +160,21 @@ private void bindListener()
         Intent inten = new Intent();
       inten.setClass(getActivity(), MyOderListActivity.class);
      startActivity(inten);
+        
+    }
+
+    //我的评价
+    @OnClick(R.id.my_pingjia_ly)
+    private void onMy_PingJia_LyOnclick(View v) {
+    	Intent intent=new Intent(getActivity(),MyJudgeActivity.class);
+    	startActivity(intent);
+    }
+    //我的钱包
+    @OnClick(R.id.Order_view)    
+    private void onOrder_ViewOnClick(View v)
+    {
+    	Intent intent=new Intent(getActivity(),WalletActivity.class);
+    	startActivity(intent);
         
     }
 
@@ -144,24 +188,29 @@ private void bindListener()
         {
             
                
-            Toast.makeText(getActivity(), "妫�娴嬬増鏈洿鏂�", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "检查更新", Toast.LENGTH_SHORT).show();
         }
         else if (v == guanyu)
         {
             
-            Toast.makeText(getActivity(), "鍏充簬鎴戜滑", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "关于", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getActivity(), AboutUsActivity.class);
             startActivity(intent);
         }else if(v==shouchang){
-            Toast.makeText(getActivity(), "鏀惰棌", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "收藏", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getActivity(), CollectionActivity.class);
             startActivity(intent);
             
         }else if(v==fankui){
-            Toast.makeText(getActivity(), "鍙嶉", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "反馈", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getActivity(), BakeContentActivity.class);
             startActivity(intent);
             
+        }else if(v==xiugaipwd){
+            
+            Toast.makeText(getActivity(), "修改支付密码总页面", Toast.LENGTH_SHORT).show();
+           Intent intent = new Intent(getActivity(), ChangePwdZActivity.class);
+           startActivity(intent);
         }
     }
     

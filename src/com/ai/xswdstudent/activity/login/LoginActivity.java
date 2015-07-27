@@ -1,4 +1,4 @@
-package com.ai.xswdstudent.activity;
+package com.ai.xswdstudent.activity.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ai.xswdstudent.R;
+import com.ai.xswdstudent.activity.RegisterActivity;
 import com.ai.xswdstudent.baseactivity.BaseActivity;
 import com.ai.xswdstudent.fragment.MainFragmentActivity;
 import com.ai.xswdstudent.global.GlobalConstant;

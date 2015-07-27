@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ai.xswdstudent.R;
+import com.ai.xswdstudent.activity.seting.PersoncentUpdateNameActivity;
+import com.ai.xswdstudent.activity.seting.UpdateSexActivity;
 import com.ai.xswdstudent.baseactivity.BaseActivity;
 import com.ai.xswdstudent.fragment.MainFragmentActivity;
 import com.ai.xswdstudent.global.GlobalConstant;
@@ -62,6 +64,8 @@ public class PersoncentActivity  extends  BaseActivity
         
     }
     
+    
+    
   
       
     
@@ -70,7 +74,7 @@ public class PersoncentActivity  extends  BaseActivity
     {
         Toast.makeText(this, "ÐÞ¸ÄÐÔ±ð", Toast.LENGTH_SHORT).show();
         Intent inten = new Intent();
-      inten.setClass(this, PersoncentUpdateNameActivity.class);
+      inten.setClass(this, UpdateSexActivity.class);
      startActivity(inten);
         
     }

@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE"
+    android:orientation="vertical" >
+
+    <!-- person_shape.xml -->
+
+    <include layout="@layout/wx_common_title" />
+
+   <LinearLayout
+        android:id="@+id/new_messge_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="1dip"
+        android:background="@drawable/wtbg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+          <TextView
+            android:layout_width="0dip"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="女"
+              android:drawableLeft="@drawable/woman"
+            
+            android:textColor="@color/yellow_ffa500_color"
+            android:textSize="16sp" />
+
+      <!--    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/icon_switch_on" />-->
+        
+        <CheckBox
+            android:id="@+id/login_remember_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/wx_redio_xml"
+            android:checked="false"
+            android:layout_marginRight="15dp"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="1dip"
+        android:background="@drawable/wtbg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dip"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/woman"
+            android:gravity="center_vertical"
+            android:text="男"
+            android:textColor="@color/yellow_ffa500_color"
+            android:textSize="16sp" />
+
+      <!--    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:src="@drawable/icon_switch_on" />-->
+        
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/wx_redio_xml"
+            android:checked="false"
+            android:layout_marginRight="15dp"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

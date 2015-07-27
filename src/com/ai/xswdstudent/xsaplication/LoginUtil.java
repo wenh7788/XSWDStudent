@@ -9,7 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
 
-import com.ai.xswdstudent.activity.LoginActivity;
+import com.ai.xswdstudent.activity.login.LoginActivity;
 import com.ai.xswdstudent.global.GlobalConstant;
 import com.ai.xswdstudent.model.UserItem;
 import com.ai.xswdstudent.util.ListUtil;

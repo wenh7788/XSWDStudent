@@ -11,12 +11,15 @@ import com.ai.xswdstudent.adapter.MsgSysNoRead_Adapter;
 import com.ai.xswdstudent.baseactivity.BaseActivity;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.lidroid.xutils.view.annotation.event.OnItemClick;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MsgSysNoReadActivity extends BaseActivity{
@@ -85,5 +88,11 @@ public class MsgSysNoReadActivity extends BaseActivity{
 		listMsgSysNoReadData.add(map4);
 		
 	}
-
+	@OnItemClick(R.id.listmsgsysnoread)  
+    public void itemClick_listMsgSysNoRead(AdapterView<?> parent, View view, int position,long id) {  
+       
+		//记得传递参数，类似homeworkid
+		Intent intent =new Intent(this,MsgDetailsActivity.class);
+		startActivity(intent);
+	}
 }

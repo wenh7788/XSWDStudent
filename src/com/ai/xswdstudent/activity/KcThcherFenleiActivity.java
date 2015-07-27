@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.TextView;
 
 import com.ai.xswdstudent.R;
 import com.ai.xswdstudent.baseactivity.BaseActivity;
@@ -17,6 +18,7 @@ import com.ai.xswdstudent.ui.TabPagerAdapter;
 import com.ai.xswdstudent.view.NewTechserCommentPageView;
 import com.ai.xswdstudent.widget.TabPageIndicator;
 import com.lidroid.xutils.ViewUtils;
+import com.lidroid.xutils.view.annotation.ViewInject;
 
 public class KcThcherFenleiActivity extends BaseActivity
 {
@@ -39,6 +41,9 @@ public class KcThcherFenleiActivity extends BaseActivity
      */
     private List<View> mViews;
     
+    @ViewInject(R.id.common_title_center_text)
+    private TextView commontitle;
+    
     /**
      * 页卡标题
      */
@@ -53,7 +58,8 @@ public class KcThcherFenleiActivity extends BaseActivity
         ViewUtils.inject(this); //xutils必加语句在      使用注解绑定控件的时候，一定记得在onCreate中调用
         initViews();
         initViewPager();
-        setTitle("任课老师");
+       // setTitle("任课老师");
+        commontitle.setText("任课老师");
         
     }
     

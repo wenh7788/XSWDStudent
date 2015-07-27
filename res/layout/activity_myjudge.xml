@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#fff"
+    >
+    
+    <include
+        android:id="@+id/base_top"
+        layout="@layout/activity_base_top"
+        />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView 
+                android:id="@+id/txttoteacher"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="我对老师"
+                android:gravity="center"
+                android:padding="20dp"
+                />
+			<TextView 
+			    android:id="@+id/txttoteacher_line"
+			    android:layout_width="fill_parent"
+			    android:layout_height="2dp"
+			    android:background="#f78642"
+			    />
+        </LinearLayout>
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <TextView 
+                android:id="@+id/txttome"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="老师对我"
+                android:gravity="center"
+                android:padding="20dp"
+                />
+			<TextView 
+			    android:id="@+id/txttome_line"
+			    android:layout_width="fill_parent"
+			    android:layout_height="2dp"
+			    android:background="#ffffff"
+			    />
+        </LinearLayout> 
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_judge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+    
+    
+</LinearLayout>

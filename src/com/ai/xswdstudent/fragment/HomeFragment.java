@@ -12,12 +12,16 @@ import java.util.List;
 
 
 
+
+
 import com.ai.xswdstudent.R;
 import com.ai.xswdstudent.activity.CitySelectActivity;
 import com.ai.xswdstudent.activity.KcThcherFenleiActivity;
 import com.ai.xswdstudent.activity.TcherActivity;
 import com.ai.xswdstudent.activity.HomeWorkActivity;
+import com.ai.xswdstudent.activity.TeacherDetailsActivity;
 import com.ai.xswdstudent.adapter.Ad_Adapter;
+import com.ai.xswdstudent.core.CaptureActivity;
 import com.ai.xswdstudent.util.LruImageCache;
 import com.ai.xswdstudent.util.QRImageUtil;
 import com.android.volley.RequestQueue;
@@ -52,7 +56,7 @@ import android.widget.RelativeLayout.LayoutParams;
 
 public class HomeFragment extends Fragment{
 
-	private View rootView; //缓存fragment view
+	private View rootView; //缂撳瓨fragment view
 	
 	@ViewInject(R.id.imgsearch)
 	private ImageView imgsearch;
@@ -67,23 +71,26 @@ public class HomeFragment extends Fragment{
 	@ViewInject(R.id.btnscan)
 	private Button btnscan;
 	
+	@ViewInject(R.id.btndbst)
+	private Button btndbst;
+	
 	@ViewInject(R.id.btnhomework)
 	private Button btnhomework;
 	
 	
 	   @ViewInject(R.id.btntjls)
-    private Button btn_techer;  //µã»÷ÀÏÊ¦ÈÎ¿Î
+    private Button btn_techer;  //碌茫禄梅脌脧脢娄脠脦驴脦
 	   
 
        @ViewInject(R.id.btntjkc)
-    private Button btn_jkc;  //µã»÷ÀÏÊ¦ÈÎ¿Î
+    private Button btn_jkc;  //碌茫禄梅脌脧脢娄脠脦驴脦
 
-	//´æ·Å´ÓÔ¶³Ì»ñµÃ¹ã¸æÍ¼Æ¬
+	//麓忙路脜麓脫脭露鲁脤禄帽碌脙鹿茫赂忙脥录脝卢
 	private List<ImageView> listAdView=new ArrayList<ImageView>();
-	//广告图片adapter
+	//骞垮憡鍥剧墖adapter
 	private Ad_Adapter ad_Adapter;
 	
-	//测试数据_后面删除
+	//娴嬭瘯鏁版嵁_鍚庨潰鍒犻櫎
 	private List<String> listImagepath;
 	
 	@Override
@@ -101,10 +108,10 @@ public class HomeFragment extends Fragment{
 		
 		
 //		View view=inflater.inflate(R.layout.fragment_home, null);	
-//		ViewUtils.inject(this, view); //xutils必须加的
+//		ViewUtils.inject(this, view); //xutils蹇呴』鍔犵殑
 
 
-		ViewUtils.inject(this, rootView); //xutils必须加的
+		ViewUtils.inject(this, rootView); //xutils蹇呴』鍔犵殑
 		return 	rootView;
 		
 	}
@@ -118,7 +125,7 @@ public class HomeFragment extends Fragment{
 
 		initViewPager();
 
-		//这句是生产二维码的：先暂时写在这里，其实后面是需要动态生成某个人的二维码链接的（我的-个人信息）。
+		//杩欏彞鏄敓浜т簩缁寸爜鐨勶細鍏堟殏鏃跺啓鍦ㄨ繖閲岋紝鍏跺疄鍚庨潰鏄渶瑕佸姩鎬佺敓鎴愭煇涓汉鐨勪簩缁寸爜閾炬帴鐨勶紙鎴戠殑-涓汉淇℃伅锛夈��
 		//imgsearch.setImageBitmap(QRImageUtil.createQRImage("http://www.baidu.com/"));
 	}
 
@@ -132,7 +139,7 @@ public class HomeFragment extends Fragment{
 
 	
 	private void initViewPager() {
-		//以后要删除
+		//浠ュ悗瑕佸垹闄�
 		listImagepath=new ArrayList<String>();
 		listImagepath.add("https://www.baidu.com/img/bd_logo1.png");
 		listImagepath.add("https://www.baidu.com/img/bd_logo1.png");
@@ -158,36 +165,50 @@ public class HomeFragment extends Fragment{
 	@OnClick(R.id.imgsearch)
 	public void onImgSearchClick(View v)
 	{
-		Toast.makeText(getActivity(), "点击搜索", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getActivity(), "鐐瑰嚮鎼滅储", Toast.LENGTH_SHORT).show();
 	}
 	
 	@OnClick(R.id.btntjls)
     public void oncherClick(View v)
     {
-        Toast.makeText(getActivity(), "µã»÷ÀÏÊ¦", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "碌茫禄梅脌脧脢娄", Toast.LENGTH_SHORT).show();
         
         Intent intent=new Intent(getActivity(),TcherActivity.class);
         startActivity(intent);
     }
 	
+	
+	   
+	   @OnClick(R.id.btnscan)
+	    public void onScanClick(View v){
+	       Toast.makeText(getActivity(), "扫码上课", Toast.LENGTH_SHORT).show();
+	        
+	       Intent intent=new Intent(getActivity(),CaptureActivity.class);
+	     //  CameraManager  cameraManager = new CameraManager(getActivity());
+	        startActivity(intent);
+	       
+	       
+	        
+	    }
+	
 	@OnClick(R.id.txtcity)
 	public void onTxtCityClick(View v)
 	{
-		Toast.makeText(getActivity(), "选择城市", Toast.LENGTH_SHORT).show();
+		Toast.makeText(getActivity(), "閫夋嫨鍩庡競", Toast.LENGTH_SHORT).show();
 		Intent intent=new Intent(getActivity(),CitySelectActivity.class);
 		startActivity(intent);
 	}
-	  //Ñ¡Ôñ¿Î³Ì
+	  //脩隆脭帽驴脦鲁脤
 	
 	   @OnClick(R.id.btntjkc)
 	    public void ontClick(View v)
 	    {
-	        Toast.makeText(getActivity(), "Ñ¡Ôñ¿Î³ÌÀÏÊ¦", Toast.LENGTH_SHORT).show();
+	        Toast.makeText(getActivity(), "脩隆脭帽驴脦鲁脤脌脧脢娄", Toast.LENGTH_SHORT).show();
 	        Intent intent=new Intent(getActivity(),KcThcherFenleiActivity.class);
 	        startActivity(intent);
 	    }
 	
-	//扫描上课
+	//鎵弿涓婅
 	@OnClick(R.id.btnscan)
 	public void onBtnScanClick(View v)
 	{
@@ -208,7 +229,7 @@ public class HomeFragment extends Fragment{
 		
 		
 	}
-	//作业神器
+	//浣滀笟绁炲櫒
 	@OnClick(R.id.btnhomework)
 	public void onBtnHomeWorkClick(View v)
 	{
@@ -225,10 +246,15 @@ public class HomeFragment extends Fragment{
 		drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());  
 		btnhomework.setCompoundDrawables(drawable,null,null,null);
 	
-		//跳转到作业神器页面
+		//璺宠浆鍒颁綔涓氱鍣ㄩ〉闈�
 		
 		Intent intent=new Intent(getActivity(),HomeWorkActivity.class);
 		startActivity(intent);
 	}
-
+	@OnClick(R.id.btndbst)
+	public void onBtnDBSTClick(View v)
+	{
+		Intent intent=new Intent(getActivity(),TeacherDetailsActivity.class);
+		startActivity(intent);
+	}
 }
