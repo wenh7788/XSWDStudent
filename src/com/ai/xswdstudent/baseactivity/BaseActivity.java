@@ -24,6 +24,9 @@ public class BaseActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		//添加到Activity集合
+
+        AppManager.getInstance().addActivity(BaseActivity.this);
 
 	}
 	
@@ -74,5 +77,18 @@ public class BaseActivity extends Activity{
 	{
 		getCommonView().initBaseTopRight().setBackgroundResource(iRes);
 	}
+	
+	
+	@Override
+
+    protected void onDestroy() {
+
+        super.onDestroy();
+
+        //结束Activity&从集合中移除
+
+        AppManager.getInstance().finishActivity(this);
+
+    }
 	
 }

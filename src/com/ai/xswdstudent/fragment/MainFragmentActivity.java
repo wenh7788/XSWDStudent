@@ -17,21 +17,21 @@ import android.widget.TabHost.TabSpec;
 
 public class MainFragmentActivity extends FragmentActivity {
 
-	//¶¨ÒåFragmentTabHost¶ÔÏó
+	//å®šä¹‰FragmentTabHostå¯¹è±¡
 	private TabFragmentHost mTabHost;
-	//¶¨ÒåÒ»¸ö²¼¾Ö
+	//å®šä¹‰ä¸€ä¸ªå¸ƒå±€
 	private LayoutInflater layoutInflater;
 	
 	
-	//¶¨ÒåÊı×éÀ´´æ·ÅFragment½çÃæ
+	//å®šä¹‰æ•°ç»„æ¥å­˜æ”¾Fragmentç•Œé¢
 	private Class fragmentArray[] = {HomeFragment.class,MsgFragment.class,ClassifyFragment.class,MineFragment.class};
 	
-	//¶¨ÒåÊı×éÀ´´æ·Å°´Å¥Í¼Æ¬
+	//å®šä¹‰æ•°ç»„æ¥å­˜æ”¾æŒ‰é’®å›¾ç‰‡
 	private int mImageViewArray[] = {R.drawable.home_tab,R.drawable.msg_tab,
 									 R.drawable.classify_tab,R.drawable.mine_tab};
 	
-	//TabÑ¡Ïî¿¨µÄÎÄ×Ö
-	private String mTextviewArray[] = {"Ê×Ò³", "ÏûÏ¢", "·ÖÀà", "ÎÒµÄ"};
+	//Tabé€‰é¡¹å¡çš„æ–‡å­—
+	private String mTextviewArray[] = {"é¦–é¡µ", "æ¶ˆæ¯", "åˆ†ç±»", "æˆ‘çš„"};
 
 	
 	@Override
@@ -43,25 +43,25 @@ public class MainFragmentActivity extends FragmentActivity {
 	}
 
 	
-	//³õÊ¼»¯×é½¨
+	//åˆå§‹åŒ–ç»„å»º
 	private void initView()
 	{
-		//ÊµÀı»¯²¼¾Ö¶ÔÏó
+		//å®ä¾‹åŒ–å¸ƒå±€å¯¹è±¡
 		layoutInflater = LayoutInflater.from(this);
 				
-		//ÊµÀı»¯TabHost¶ÔÏó£¬µÃµ½TabHost
+		//å®ä¾‹åŒ–TabHostå¯¹è±¡ï¼Œå¾—åˆ°TabHost
 		mTabHost = (TabFragmentHost)findViewById(android.R.id.tabhost);
 		mTabHost.setup(this, getSupportFragmentManager(), R.id.maincontent);	
 		
-		//µÃµ½fragmentµÄ¸öÊı
+		//å¾—åˆ°fragmentçš„ä¸ªæ•°
 		int count = fragmentArray.length;	
 				
 		for(int i = 0; i < count; i++){	
-			//ÎªÃ¿Ò»¸öTab°´Å¥ÉèÖÃÍ¼±ê¡¢ÎÄ×ÖºÍÄÚÈİ
+			//ä¸ºæ¯ä¸€ä¸ªTabæŒ‰é’®è®¾ç½®å›¾æ ‡ã€æ–‡å­—å’Œå†…å®¹
 			TabSpec tabSpec = mTabHost.newTabSpec(mTextviewArray[i]).setIndicator(getTabItemView(i));
-			//½«Tab°´Å¥Ìí¼Ó½øTabÑ¡Ïî¿¨ÖĞ
+			//å°†TabæŒ‰é’®æ·»åŠ è¿›Tabé€‰é¡¹å¡ä¸­
 			mTabHost.addTab(tabSpec, fragmentArray[i], null);
-			//ÉèÖÃTab°´Å¥µÄ±³¾°
+			//è®¾ç½®TabæŒ‰é’®çš„èƒŒæ™¯
 			mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.selector_tab_background);
 			//mTabHost.getTabWidget().getChildAt(i).setBackgroundResource(R.drawable.selector_tab_background);
 
@@ -70,7 +70,7 @@ public class MainFragmentActivity extends FragmentActivity {
 	
 	
 	/**
-	 * ¸øTab°´Å¥ÉèÖÃÍ¼±êºÍÎÄ×Ö
+	 * ç»™TabæŒ‰é’®è®¾ç½®å›¾æ ‡å’Œæ–‡å­—
 	 */
 	private View getTabItemView(int index){
 		View view = layoutInflater.inflate(R.layout.tab_item_view, null);

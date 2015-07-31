@@ -11,7 +11,7 @@
 	    android:layout_width="0dp"
 	    android:layout_height="wrap_content"
 	    android:layout_weight="3"
-	    android:background="@drawable/timeline_content"
+	    android:background="@drawable/cz_left_bg"
 	    android:orientation="horizontal"
 	    android:visibility="invisible"
 		android:layout_margin="10dp"	    
@@ -74,9 +74,9 @@
 	    android:layout_width="0dp"
 	    android:layout_height="wrap_content"
 	    android:layout_weight="3"	
-	    android:background="@drawable/timeline_content"
+	    android:background="@drawable/kk_right_bg"
 	    android:orientation="horizontal"
-	    android:visibility="invisible"	
+		android:visibility="invisible"
 		android:layout_margin="10dp"		        
 	    >
 		<LinearLayout 

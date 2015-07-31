@@ -100,7 +100,7 @@ public class LoginUtil
         if (null != userItem)
         {
             String uid = userItem.userId;
-            String phone = userItem.phone;
+            String phone = userItem.mobile;
             String password = userItem.password;
             String gender = userItem.parentSex;
             String pushId = userItem.pushId;
@@ -168,7 +168,7 @@ public class LoginUtil
                 "1");
         
         saveUserItem.userId = uid;
-        saveUserItem.phone = telphone;
+        saveUserItem.mobile = telphone;
         saveUserItem.password = password;
         saveUserItem.parentSex = gender;
         //        saveUserItem.children = children;

@@ -49,9 +49,9 @@ public class CitySelectActivity extends BaseActivity
     
     private MyLetterListView letterListView;
     
-    private HashMap<String, Integer> alphaIndexer;// ´æ·Å´æÔÚµÄººÓïÆ´ÒôÊ××ÖÄ¸ºÍÓëÖ®¶ÔÓ¦µÄÁĞ±íÎ»ÖÃ
+    private HashMap<String, Integer> alphaIndexer;// å­˜æ”¾å­˜åœ¨çš„æ±‰è¯­æ‹¼éŸ³é¦–å­—æ¯å’Œä¸ä¹‹å¯¹åº”çš„åˆ—è¡¨ä½ç½®
     
-    private String[] sections;// ´æ·Å´æÔÚµÄººÓïÆ´ÒôÊ××ÖÄ¸
+    private String[] sections;// å­˜æ”¾å­˜åœ¨çš„æ±‰è¯­æ‹¼éŸ³é¦–å­—æ¯
     
     private Handler handler;
     
@@ -69,11 +69,11 @@ public class CitySelectActivity extends BaseActivity
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.city_list);
-        ViewUtils.inject(this); //xutils±Ø¼ÓÓï¾äÔÚ      Ê¹ÓÃ×¢½â°ó¶¨¿Ø¼şµÄÊ±ºò£¬Ò»¶¨¼ÇµÃÔÚonCreateÖĞµ÷ÓÃ
-//        setTitle("111»»³ÇÊĞ");
+        ViewUtils.inject(this); //xutilså¿…åŠ è¯­å¥åœ¨      ä½¿ç”¨æ³¨è§£ç»‘å®šæ§ä»¶çš„æ—¶å€™ï¼Œä¸€å®šè®°å¾—åœ¨onCreateä¸­è°ƒç”¨
+//        setTitle("111æ¢åŸå¸‚");
         
         TextView tv_name = (TextView) findViewById(R.id.common_title_center_text);
-        tv_name.setText("ÇĞ»»³ÇÊĞ");
+        tv_name.setText("åˆ‡æ¢åŸå¸‚");
         
         initView();
     }
@@ -106,7 +106,7 @@ public class CitySelectActivity extends BaseActivity
     
     
     /**
-     * ´ÓÊı¾İ¿â»ñÈ¡³ÇÊĞÊı¾İ
+     * ä»æ•°æ®åº“è·å–åŸå¸‚æ•°æ®
      * 
      * @return
      */
@@ -127,7 +127,7 @@ public class CitySelectActivity extends BaseActivity
     }
     
     /**
-     * ³ÇÊĞÁĞ±íµã»÷ÊÂ¼ş
+     * åŸå¸‚åˆ—è¡¨ç‚¹å‡»äº‹ä»¶
      * 
      * @author sy
      * 
@@ -152,7 +152,7 @@ public class CitySelectActivity extends BaseActivity
     }
     
     /**
-     * ÎªListViewÉèÖÃÊÊÅäÆ÷
+     * ä¸ºListViewè®¾ç½®é€‚é…å™¨
      * 
      * @param list
      */
@@ -188,10 +188,10 @@ public class CitySelectActivity extends BaseActivity
             
             for (int i = 0; i < list.size(); i++)
             {
-                // µ±Ç°ººÓïÆ´ÒôÊ××ÖÄ¸
+                // å½“å‰æ±‰è¯­æ‹¼éŸ³é¦–å­—æ¯
                 // getAlpha(list.get(i));
                 String currentStr = list.get(i).getNameSort();
-                // ÉÏÒ»¸öººÓïÆ´ÒôÊ××ÖÄ¸£¬Èç¹û²»´æÔÚÎª¡° ¡±
+                // ä¸Šä¸€ä¸ªæ±‰è¯­æ‹¼éŸ³é¦–å­—æ¯ï¼Œå¦‚æœä¸å­˜åœ¨ä¸ºâ€œ â€
                 String previewStr = (i - 1) >= 0 ? list.get(i - 1)
                         .getNameSort() : " ";
                 if (!previewStr.equals(currentStr))
@@ -267,7 +267,7 @@ public class CitySelectActivity extends BaseActivity
         
     }
     
-    // ³õÊ¼»¯ººÓïÆ´ÒôÊ××ÖÄ¸µ¯³öÌáÊ¾¿ò
+    // åˆå§‹åŒ–æ±‰è¯­æ‹¼éŸ³é¦–å­—æ¯å¼¹å‡ºæç¤ºæ¡†
     private void initOverlay()
     {
         LayoutInflater inflater = LayoutInflater.from(this);
@@ -297,14 +297,14 @@ public class CitySelectActivity extends BaseActivity
                 overlay.setText(sections[position]);
                 overlay.setVisibility(View.VISIBLE);
                 handler.removeCallbacks(overlayThread);
-                // ÑÓ³ÙÒ»ÃëºóÖ´ĞĞ£¬ÈÃoverlayÎª²»¿É¼û
+                // å»¶è¿Ÿä¸€ç§’åæ‰§è¡Œï¼Œè®©overlayä¸ºä¸å¯è§
                 handler.postDelayed(overlayThread, 1500);
             }
         }
         
     }
     
-    // ÉèÖÃoverlay²»¿É¼û
+    // è®¾ç½®overlayä¸å¯è§
     private class OverlayThread implements Runnable
     {
         

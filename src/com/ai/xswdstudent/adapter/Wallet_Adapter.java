@@ -70,23 +70,25 @@ public class Wallet_Adapter extends BaseAdapter{
 		}
 		
 	
-		if (listAcctData.get(position).get("flag").toString().equals("0")) //¿Û¿î
+		if (listAcctData.get(position).get("flag").toString().equals("0")) //å……å€¼
 		{
 			holder.llayoutleft.setVisibility(View.VISIBLE);
 			holder.llayoutright.setVisibility(View.INVISIBLE);
 			
 			holder.txtkk.setText(listAcctData.get(position).get("money").toString());
-			holder.txtkktime.setText(listAcctData.get(position).get("time").toString());		
-			holder.txtpoint.setBackgroundColor(Color.rgb(247,134,66));
+			holder.txtkktime.setText(listAcctData.get(position).get("time").toString());
+			holder.txtpoint.setBackgroundResource(R.drawable.cz_left_point);
+			//holder.txtpoint.setBackgroundColor(Color.rgb(247,134,66));
 		}
-		else //³äÖµ
+		else//æ‰£æ¬¾
 		{
 			holder.llayoutleft.setVisibility(View.INVISIBLE);
 			holder.llayoutright.setVisibility(View.VISIBLE);
 			
 			holder.txtcz.setText(listAcctData.get(position).get("money").toString());
-			holder.txtcztime.setText(listAcctData.get(position).get("time").toString());		
-			holder.txtpoint.setBackgroundColor(Color.rgb(71, 179, 243));
+			holder.txtcztime.setText(listAcctData.get(position).get("time").toString());
+			holder.txtpoint.setBackgroundResource(R.drawable.kk_right_point);
+			//holder.txtpoint.setBackgroundColor(Color.rgb(71, 179, 243));
 	
 			
 		}		

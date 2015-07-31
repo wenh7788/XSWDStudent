@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,13 +28,13 @@ public class NextRegisterActivity extends BaseActivity
 {
     
     @ViewInject(R.id.et_register_vertification)
-    //验证码填空框
+    //脩茅脰陇脗毛脤卯驴脮驴貌
     private EditText YZNuber;
     
     @ViewInject(R.id.et_register_password)
-    //密码
+    //脙脺脗毛
     private EditText Pssword;
-    //发送验证码倒计时
+    //路垄脣脥脩茅脰陇脗毛碌鹿录脝脢卤
     @ViewInject(R.id.btn_register_vertification)
     private Button btn_sendMess;
     
@@ -54,20 +55,20 @@ public class NextRegisterActivity extends BaseActivity
         
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_two);
-        ViewUtils.inject(this); //xutils必加语句在      使用注解绑定控件的时候，一定记得在onCreate中调用
+        ViewUtils.inject(this); //xutils卤脴录脫脫茂戮盲脭脷      脢鹿脫脙脳垄陆芒掳贸露篓驴脴录镁碌脛脢卤潞貌拢卢脪禄露篓录脟碌脙脭脷onCreate脰脨碌梅脫脙
         time = new TimeCount(60000, 1000);
-        setTitle("注册");
+        setTitle("脳垄虏谩");
         
     }
     
-    //发送验证码
+    //路垄脣脥脩茅脰陇脗毛
     @OnClick(R.id.btn_register_vertification)
     private void btn_sendMess(){
         time.start();
        
     }
     
-    //获取倒计时
+    //禄帽脠隆碌鹿录脝脢卤
     
     class TimeCount extends CountDownTimer {
         
@@ -79,12 +80,12 @@ public class NextRegisterActivity extends BaseActivity
         public void onTick(long millisUntilFinished) {
             btn_sendMess.setBackgroundColor(Color.WHITE);
             btn_sendMess.setClickable(false);
-            btn_sendMess.setText(millisUntilFinished / 1000 + "秒后可重新发送");
+            btn_sendMess.setText(millisUntilFinished / 1000 + "脙毛潞贸驴脡脰脴脨脗路垄脣脥");
         }
  
         @Override
         public void onFinish() {
-            btn_sendMess.setText("重新获取验证码");
+            btn_sendMess.setText("脰脴脨脗禄帽脠隆脩茅脰陇脗毛");
             btn_sendMess.setClickable(true);
             btn_sendMess.setBackgroundColor(Color.BLACK);  //Color.parseColor(#4EB84A)
  
@@ -112,12 +113,12 @@ public class NextRegisterActivity extends BaseActivity
         {
             
             HttpUtils http = new HttpUtils();
-            String url = "http://192.168.1.6/UserService.svc/GetPerson";
+            String url = "http://59.175.144.98:8080/msxxw/webservice/rest/UserRTS/registerByUsername";
             RequestParams params = new RequestParams();
-            params.addQueryStringParameter("phone", mobile);
-            params.addQueryStringParameter("yzm", yzm);
-            params.addQueryStringParameter("pwd", pwd);
-            http.send(HttpMethod.GET,
+            params.addQueryStringParameter("userName", mobile);
+            params.addQueryStringParameter("validationCode", yzm);
+            params.addQueryStringParameter("password", pwd);
+            http.send(HttpMethod.POST,
                     url,
                     params,
                     new RequestCallBack<String>()
@@ -127,8 +128,10 @@ public class NextRegisterActivity extends BaseActivity
                         public void onSuccess(ResponseInfo<String> responseInfo)
                         {
                             
+                            
+                            Log.d("nexregit=====log", responseInfo.result);
                             Intent intent5 = new Intent();
-                            intent5.setClass(mContext, LoginActivity.class);
+                            intent5.setClass(NextRegisterActivity.this, LoginActivity.class);
                             startActivity(intent5);
                             finish();
                         }
@@ -137,7 +140,7 @@ public class NextRegisterActivity extends BaseActivity
                         public void onFailure(HttpException error, String msg)
                         {
                             Toast.makeText(getApplicationContext(),
-                                    "登陆失败" + msg,
+                                    "锟斤拷陆失锟斤拷" + msg,
                                     Toast.LENGTH_SHORT).show();
                         }
                         

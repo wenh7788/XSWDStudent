@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -36,9 +37,9 @@ public class WalletActivity extends BaseActivity{
 		super.onCreate(savedInstanceState);
 		
 		setContentView(R.layout.activity_wallet);
-		
-		ViewUtils.inject(this); //xutils必须加的
-		setTitle("我的钱包");
+		System.out.println("WalletActivity.class_鎴戠殑閽卞寘");
+		ViewUtils.inject(this); //xutils蹇呴』鍔犵殑
+		setTitle("鎴戠殑閽卞寘");
 		initView();
 		
 		
@@ -49,6 +50,14 @@ public class WalletActivity extends BaseActivity{
 		initAcctData();
 		
 		waller_adapter=new Wallet_Adapter(listAcctData,this);
+		
+		LayoutInflater mInflater =getLayoutInflater();
+//		listMsgView.add(mInflater.inflate(R.layout.activity_msg_sysall, null));
+//		listMsgView.add(mInflater.inflate(R.layout.activity_msg_sysnoread, null));
+		View view=mInflater.inflate(R.layout.item_acct_top, null);
+		listacct.addHeaderView(view);//鎶婁竴涓猇iew娣诲姞鍒癏eader
+		
+		
 		listacct.setAdapter(waller_adapter);
 		
 		

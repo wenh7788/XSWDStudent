@@ -15,10 +15,8 @@ import com.ai.xswdstudent.activity.RegisterActivity;
 import com.ai.xswdstudent.baseactivity.BaseActivity;
 import com.ai.xswdstudent.fragment.MainFragmentActivity;
 import com.ai.xswdstudent.global.GlobalConstant;
-import com.ai.xswdstudent.model.UserItem;
+import com.ai.xswdstudent.util.StringUtil;
 import com.ai.xswdstudent.xsaplication.SharedPreferencesUtil;
-import com.ai.xswdstudent.xsaplication.StringUtil;
-import com.ai.xswdstudent.xsaplication.XSApplication;
 import com.lidroid.xutils.HttpUtils;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.exception.HttpException;
@@ -87,7 +85,7 @@ public class LoginActivity extends BaseActivity
     /**
      * 登录用户
      */
-    private UserItem loginUserItem = XSApplication.getInstance().loginUserItem;
+   // private UserItem loginUserItem = XSApplication.getInstance().loginUserItem;
     
     private ImageView mImageView;
     
@@ -98,22 +96,22 @@ public class LoginActivity extends BaseActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wx_login_activity);
         ViewUtils.inject(this); //xutils必加语句在      使用注解绑定控件的时候，一定记得在onCreate中调用
-        setTitle("");
-        initData();
+      //  setTitle("");
+       // initData();
     }
     
-    private void initData()
-    {
-        telphoneEditText.setText(SharedPreferencesUtil.getSharedPreferences(mContext,
-                GlobalConstant.UserInfoPreference.TELPHONE,
-                ""));
-        passwordEditText.setText(SharedPreferencesUtil.getSharedPreferences(mContext,
-                GlobalConstant.UserInfoPreference.PASSWORD,
-                ""));
-        rememberCheckBox.setChecked(SharedPreferencesUtil.getSharedPreferences(mContext,
-                GlobalConstant.REMEMBER_PASSWORD,
-                false));
-    }
+//    private void initData()
+//    {
+//        telphoneEditText.setText(SharedPreferencesUtil.getSharedPreferences(mContext,
+//                GlobalConstant.UserInfoPreference.TELPHONE,
+//                ""));
+//        passwordEditText.setText(SharedPreferencesUtil.getSharedPreferences(mContext,
+//                GlobalConstant.UserInfoPreference.PASSWORD,
+//                ""));
+//        rememberCheckBox.setChecked(SharedPreferencesUtil.getSharedPreferences(mContext,
+//                GlobalConstant.REMEMBER_PASSWORD,
+//                false));
+//    }
     
  
 
@@ -137,12 +135,12 @@ public class LoginActivity extends BaseActivity
         else
         {
             HttpUtils http = new HttpUtils();
-            String url = "http://192.168.1.6/UserService.svc/GetPerson";
+            String url = "http://59.175.144.98:8080/msxxw/webservice/rest/UserRTS/login";
             RequestParams params = new RequestParams();
-            params.addQueryStringParameter("phone", telphone);
+            params.addQueryStringParameter("userName", telphone);
             params.addQueryStringParameter("password", password);
             
-            http.send(HttpMethod.GET,
+            http.send(HttpMethod.POST,
                     url,
                     params,
                     new RequestCallBack<String>()
@@ -154,11 +152,11 @@ public class LoginActivity extends BaseActivity
                             //                          UserItem userInfo=JSON.parseObject(responseInfo.result,UserItem.class); 
                             //                          Toast.makeText(getApplicationContext(), "请求结果：" + userInfo.phone, Toast.LENGTH_SHORT).show(); 
                             
-                            SharedPreferencesUtil.saveSharedPreferences(mContext,
-                                    GlobalConstant.REMEMBER_PASSWORD,
-                                    rememberCheckBox.isChecked());
+//                            SharedPreferencesUtil.saveSharedPreferences(mContext,
+//                                    GlobalConstant.REMEMBER_PASSWORD,
+//                                    rememberCheckBox.isChecked());
                             Intent intent5 = new Intent();
-                            intent5.setClass(mContext,
+                            intent5.setClass(LoginActivity.this,
                                     MainFragmentActivity.class);
                             startActivity(intent5);
                             finish();

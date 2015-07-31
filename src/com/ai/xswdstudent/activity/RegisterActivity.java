@@ -2,6 +2,7 @@ package com.ai.xswdstudent.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,15 +43,18 @@ public class RegisterActivity  extends  BaseActivity
         
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_one);
-        ViewUtils.inject(this); //xutils±Ø¼ÓÓï¾äÔÚ      Ê¹ÓÃ×¢½â°ó¶¨¿Ø¼şµÄÊ±ºò£¬Ò»¶¨¼ÇµÃÔÚonCreateÖĞµ÷ÓÃ
-        setTitle("×¢²á");
+        ViewUtils.inject(this); //xutilsï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½      Ê¹ï¿½ï¿½×¢ï¿½ï¿½ó¶¨¿Ø¼ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½onCreateï¿½Ğµï¿½ï¿½ï¿½
+        //setTitle("×¢ï¿½ï¿½");
       
     }
     
-    @OnClick(R.id.login_submit)
+    @OnClick(R.id.btn_register_first_submit)
     public void btn_testClick(View v)
     
     {
+        Toast.makeText(this,
+                "å‘é€éªŒè¯å•Š",
+                 Toast.LENGTH_SHORT).show();
         
         mobile = phone.getText().toString().trim();
       
@@ -60,10 +64,10 @@ public class RegisterActivity  extends  BaseActivity
         }else {
             
             HttpUtils http = new HttpUtils();
-            String url = "http://192.168.1.6/UserService.svc/GetPerson";
+            String url = "http://59.175.144.98:8080/msxxw/webservice/rest/UserRTS/registerByUsername";
             RequestParams params = new RequestParams();
-            params.addQueryStringParameter("phone", mobile);
-            http.send(HttpMethod.GET,
+            params.addQueryStringParameter("userName", mobile);
+            http.send(HttpMethod.POST,
                     url,
                     params,
                     new RequestCallBack<String>()
@@ -72,10 +76,17 @@ public class RegisterActivity  extends  BaseActivity
                         @Override
                         public void onSuccess(ResponseInfo<String> responseInfo)
                         {
-                           
+                            
+                            
+                            
+//                            Toast.makeText(RegisterActivity.this,
+//                                   "reply: " + responseInfo.result,
+//                                    Toast.LENGTH_SHORT).show();
+                            Log.d("regit", responseInfo.result);
+
                             Intent intent5 = new Intent();
                             intent5.putExtra("mobile1", mobile);
-                            intent5.setClass(mContext,NextRegisterActivity
+                            intent5.setClass(RegisterActivity.this,NextRegisterActivity
                                     .class);
                             startActivity(intent5);
                             finish();
@@ -85,7 +96,7 @@ public class RegisterActivity  extends  BaseActivity
                         public void onFailure(HttpException error, String msg)
                         {
                             Toast.makeText(getApplicationContext(),
-                                    "µÇÂ½Ê§°Ü" + msg,
+                                    "é”™è¯¯ä¿¡æ¯" + msg,
                                     Toast.LENGTH_SHORT).show();
                         }
                         

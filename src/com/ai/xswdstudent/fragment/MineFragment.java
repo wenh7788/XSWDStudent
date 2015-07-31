@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ import com.ai.xswdstudent.activity.PersoncentActivity;
 import com.ai.xswdstudent.activity.WalletActivity;
 import com.ai.xswdstudent.activity.seting.AboutUsActivity;
 import com.ai.xswdstudent.activity.seting.ChangePwdZActivity;
+import com.ai.xswdstudent.baseactivity.AppManager;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
@@ -80,11 +82,8 @@ public class MineFragment extends Fragment  implements OnClickListener
     //鍙嶉
     @ViewInject(R.id.my_yijianfankui_ly)
     public  LinearLayout fankui;
-    
-    
-    
-    
-    
+    @ViewInject(R.id.loginout)
+    public Button tuichu;
     
     
     
@@ -97,7 +96,7 @@ public class MineFragment extends Fragment  implements OnClickListener
         
         
         lyFamily = (LinearLayout) container.findViewById(R.id.tv_Persona_view);
-        ViewUtils.inject(this, view); //xutils蹇呴』鍔犵殑
+        ViewUtils.inject(this, view); //xutils必须用到
         bindListener();
         return view;
         
@@ -110,6 +109,7 @@ private void bindListener()
     shouchang.setOnClickListener(this);
     fankui.setOnClickListener(this);
     xiugaipwd.setOnClickListener(this);
+    tuichu.setOnClickListener(this);
         
     }
 
@@ -152,11 +152,11 @@ private void bindListener()
     
 	
 	
-    //鎴戠殑璁㈠崟
+    //我的订单
     @OnClick(R.id.myorder_view)
     public void onOrderClick(View v)
     {
-        Toast.makeText(getActivity(), "鎴戠殑璁㈠崟", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getActivity(), "我的订单", Toast.LENGTH_SHORT).show();
         Intent inten = new Intent();
       inten.setClass(getActivity(), MyOderListActivity.class);
      startActivity(inten);
@@ -211,6 +211,11 @@ private void bindListener()
             Toast.makeText(getActivity(), "修改支付密码总页面", Toast.LENGTH_SHORT).show();
            Intent intent = new Intent(getActivity(), ChangePwdZActivity.class);
            startActivity(intent);
+        }else if(v==tuichu){
+            Toast.makeText(getActivity(), "退出", Toast.LENGTH_SHORT).show();
+            
+            AppManager m=new AppManager();
+            m.exit();
         }
     }
     
